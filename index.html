@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CONTACTONPRO — V13</title>
+<style>
+:root{--navy:#07172a;--blue:#1769f3;--ink:#102033;--muted:#6d7c8e;--line:#dfe6ee;--bg:#f5f7fa;--card:#fff;--green:#16824a;--soft:#eaf1ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.hidden{display:none!important}.brand{font-weight:900;font-size:23px;letter-spacing:-1px;color:#fff;text-decoration:none}.brand b{color:#4d8cff}.top{height:70px;background:var(--navy);color:#fff;display:flex;align-items:center;padding:0 5vw;gap:28px;position:sticky;top:0;z-index:20}.top nav{display:flex;gap:24px;flex:1}.top nav a{color:#cbd8e7;text-decoration:none;font-size:13px}.top-actions{display:flex;gap:8px}.ghost,.location{background:transparent;color:#fff;border:1px solid #30445e;border-radius:9px;padding:10px 13px}.primary{background:var(--blue);color:#fff;border-radius:9px;padding:11px 16px;font-weight:800}.hero{background:var(--navy);color:#fff;padding:70px 5vw 80px;display:grid;grid-template-columns:1fr 1fr;gap:55px}.eyebrow{font-size:10px;font-weight:900;letter-spacing:1.5px;color:#4d8cff}.hero h1{font-size:clamp(40px,5vw,66px);line-height:1.02;letter-spacing:-3px;margin:15px 0}.hero h1 em{font-style:normal;color:#4d8cff}.hero p{color:#b9c8d9;line-height:1.65;max-width:600px}.hero-actions{display:flex;gap:18px;align-items:center;margin-top:28px}.link{color:#dbe8ff;text-decoration:none;font-weight:800}.hero-card{background:#0d243e;border:1px solid #24425f;border-radius:18px;padding:25px;align-self:center;box-shadow:0 25px 70px #0004}.hero-card h3{margin:5px 0 15px}.search{display:grid;grid-template-columns:1.2fr 1fr auto;gap:9px}.search input,.search select{background:#fff;border:0;border-radius:9px;padding:13px;color:#263548}.trust{display:flex;gap:28px;margin-top:35px}.trust strong{display:block;font-size:19px}.trust small{color:#9fb0c3}.section{padding:65px 5vw}.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px}.head h2{margin:7px 0 0;font-size:31px;letter-spacing:-1px}.categories{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.cat{background:#fff;border:1px solid var(--line);border-radius:13px;padding:18px;text-align:left;min-height:105px;transition:.2s}.cat:hover{transform:translateY(-3px);box-shadow:0 10px 25px #0b26420c}.cat i{font-style:normal;font-size:25px}.cat strong{display:block;margin-top:12px;font-size:13px}.cat small{color:var(--muted)}.app{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);min-height:600px}.tabs{display:flex;gap:8px;margin-bottom:22px}.tab{padding:10px 14px;border-radius:8px;background:#edf2f7;color:#526276;font-weight:800}.tab.active{background:var(--navy);color:#fff}.workspace{display:grid;grid-template-columns:235px 1fr;gap:18px}.side,.content-card,.profile-card{background:#fff;border:1px solid var(--line);border-radius:14px}.side{padding:17px}.side h4{font-size:11px;color:#8a97a6;text-transform:uppercase;letter-spacing:1px}.side button{display:block;width:100%;text-align:left;background:transparent;padding:11px;border-radius:8px;color:#5f6e80}.side button.active{background:#eaf1ff;color:#1769f3;font-weight:800}.content-card{padding:24px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}.stat{border:1px solid var(--line);border-radius:11px;padding:15px}.stat small{color:var(--muted)}.stat strong{display:block;font-size:23px;margin-top:7px}.stat em{color:var(--green);font-style:normal;font-size:10px}.cards{display:grid;grid-template-columns:1.2fr .8fr;gap:15px;margin-top:15px}.inner{border:1px solid var(--line);border-radius:12px;padding:17px}.inner h3{font-size:14px;margin-top:0}.project{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-top:1px solid var(--line)}.project small{display:block;color:var(--muted);margin-top:4px}.badge{background:#eaf7ef;color:#177a46;border-radius:99px;padding:6px 8px;font-size:10px;font-weight:800;height:max-content}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}.step span{display:grid;place-items:center;width:35px;height:35px;background:var(--soft);color:var(--blue);border-radius:9px;font-weight:900}.step h3{font-size:15px}.step p{font-size:12px;color:var(--muted);line-height:1.6}.pros{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.pro{background:#fff;border:1px solid var(--line);border-radius:14px;padding:19px}.pro-top{display:flex;gap:12px;align-items:center}.avatar{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,#9cb6c7,#536b7a);display:grid;place-items:center;color:#fff;font-weight:900}.pro h3{margin:0;font-size:14px}.verified{color:var(--blue);font-size:11px}.stars{color:#f39a12;font-size:12px;margin:11px 0}.pro p{font-size:12px;color:var(--muted);line-height:1.5}.pro-footer{display:flex;justify-content:space-between;align-items:center;margin-top:16px}.pro-footer small{color:var(--muted)}.profile{display:grid;grid-template-columns:1fr 1fr;gap:18px}.profile-card{padding:25px}.profile-hero{display:flex;gap:15px;align-items:center}.profile-hero .avatar{width:64px;height:64px}.profile-card h2{margin:0}.list{margin-top:20px}.list div{padding:12px 0;border-top:1px solid var(--line);font-size:12px}.modal{position:fixed;inset:0;background:#041326bb;display:none;align-items:center;justify-content:center;padding:18px;z-index:50}.modal.open{display:flex}.modal-box{width:min(650px,100%);background:#fff;border-radius:17px;padding:28px;position:relative;max-height:90vh;overflow:auto}.close{position:absolute;right:15px;top:14px;background:#edf1f5;border-radius:50%;width:32px;height:32px;font-size:21px}.modal h2{margin:5px 0;font-size:29px}.progress{height:5px;background:#e6ebf1;border-radius:5px;margin:20px 0}.progress span{display:block;width:25%;height:100%;background:var(--blue)}.modal label{display:block;font-size:12px;font-weight:800;margin:14px 0 6px}.modal input,.modal select,.modal textarea{width:100%;border:1px solid var(--line);border-radius:9px;padding:12px}.modal .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.full{width:100%;margin-top:18px}.choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.choice{padding:13px;background:#f2f5f8;border:1px solid #e1e7ed;border-radius:9px;text-align:left}.choice.selected{border-color:var(--blue);background:#eaf1ff;color:var(--blue);font-weight:800}footer{background:var(--navy);color:#aebed0;padding:40px 5vw;display:flex;gap:25px;align-items:center}footer p{flex:1;font-size:12px}@media(max-width:900px){.top nav{display:none}.hero{grid-template-columns:1fr}.categories{grid-template-columns:repeat(3,1fr)}.workspace,.profile{grid-template-columns:1fr}.side{display:none}.stats{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr}.pros{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}}@media(max-width:600px){.top{padding:0 16px}.top-actions .ghost,.location{display:none}.hero,.section{padding-left:17px;padding-right:17px}.hero{padding-top:45px}.hero h1{font-size:43px}.search{grid-template-columns:1fr}.categories{grid-template-columns:1fr 1fr}.trust{display:grid;grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.modal .row{grid-template-columns:1fr}.choice-grid{grid-template-columns:1fr}footer{flex-direction:column;align-items:flex-start}}
+
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:#07172a;color:#fff;padding:13px 17px;border-radius:10px;box-shadow:0 14px 40px #0003;opacity:0;pointer-events:none;transition:.25s;z-index:100;font-size:13px}.toast.show{opacity:1;transform:translate(-50%,0)}.result-list{display:grid;gap:10px;margin-top:15px}.result{border:1px solid var(--line);border-radius:11px;padding:14px;background:#fff}.result-top{display:flex;justify-content:space-between;gap:12px}.result small{color:var(--muted)}.quote-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border-top:1px solid var(--line);padding:13px 0}.message{padding:11px 13px;border-radius:11px;background:#eef3f8;margin:8px 0;font-size:12px}.message.me{background:#eaf1ff;margin-left:15%}.empty{padding:24px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:11px}.notice{background:#eef6ff;border:1px solid #cfe2ff;color:#28496e;border-radius:11px;padding:13px;font-size:12px;line-height:1.5;margin-top:15px}
+
+.authbar{display:flex;gap:8px;align-items:center}.userpill{border:1px solid var(--line);padding:8px 11px;border-radius:999px;background:#fff;font-size:12px}.rolepill{font-size:10px;border-radius:999px;padding:4px 7px;background:#eaf1ff;color:#1769f3}.auth-modal{max-width:520px}.auth-tabs{display:flex;gap:6px;margin:14px 0}.auth-tabs button{flex:1;padding:11px;border:1px solid var(--line);border-radius:9px;background:#fff}.auth-tabs .active{background:#07172a;color:#fff}.backend-status{font-size:11px;padding:7px 10px;border-radius:8px;background:#fff4df;color:#815900;margin-top:10px}.backend-status.ok{background:#eaf8ef;color:#146b35}
+</style>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="#home">CONTACTONPRO</a>
+<nav><a href="#projet">Mon projet</a><a href="#pros">Trouver un pro</a><a href="#fonctionnement">Comment ça marche</a><a href="#espace">Espace pro</a></nav>
+<div class="top-actions"><button class="location">⌖ 76</button><button class="ghost" onclick="showLogin()">Se connecter</button><button class="primary" onclick="openWizard()">Décrire mon projet</button></div>
+<div class="authbar"><span id="sessionPill" class="userpill">Visiteur</span><button class="primary" type="button" onclick="window.contactonOpenAuth()">Compte</button></div></header>
+
+<section class="hero" id="home">
+<div>
+<span class="eyebrow">LA PLATEFORME DE VOS TRAVAUX</span>
+<h1>Votre projet.<br>Les bons professionnels.<br><em>Un seul endroit.</em></h1>
+<p>Décrivez votre chantier une seule fois. CONTACTONPRO organise votre demande et vous met en relation avec des professionnels adaptés, du terrassement au jardinage.</p>
+<div class="hero-actions"><button class="primary" onclick="openWizard()">Décrire mon projet en 2 minutes →</button><a class="link" href="#pros">Explorer les professionnels</a></div>
+<div class="trust"><div><strong id="metricPros">3</strong><small>pros de démonstration</small></div><div><strong id="metricProjects">0</strong><small>projets créés ici</small></div><div><strong>Prototype</strong><small>fonctionnel localement</small></div></div>
+</div>
+<div class="hero-card"><span class="eyebrow">RECHERCHER UN PROFESSIONNEL</span><h3>Quel est votre besoin ?</h3><div class="search"><select id="quickCategory"><option>Terrassement / VRD</option><option>Maçonnerie</option><option>Aménagement extérieur</option><option>Jardinage / Paysage</option><option>Toiture</option><option>Plomberie</option><option>Électricité</option></select><input id="quickLocation" placeholder="Ville ou code postal"><button class="primary" onclick="quickSearch()">Rechercher</button></div><p style="font-size:11px;color:#91a6bb">Ex. « terrassement 76120 » — vous pourrez ensuite détailler votre projet.</p></div>
+</section>
+
+<section class="section" id="projet">
+<div class="head"><div><span class="eyebrow">MON PROJET</span><h2>Un chantier, un dossier clair</h2></div><button class="primary" onclick="openWizard()">Créer un projet</button></div>
+<div class="workspace">
+<aside class="side"><h4>Mon espace</h4><button class="active" onclick="switchDashboard('client')">▦ Vue d'ensemble</button><button onclick="switchDashboard('requests')">⌁ Mes demandes</button><button onclick="switchDashboard('quotes')">▤ Mes devis</button><button onclick="switchDashboard('messages')">◌ Messages</button><button onclick="switchDashboard('profile')">⚙ Mon profil</button></aside>
+<div class="content-card" id="clientDash">
+<div id="clientView"></div>
+</div></div>
+</div>
+</section>
+
+<section class="section" id="pros">
+<div class="head"><div><span class="eyebrow">PROFESSIONNELS</span><h2>Des pros adaptés à votre projet</h2></div><span style="color:var(--muted);font-size:12px">Seine-Maritime · 0–40 km</span></div>
+<div class="pros">
+<article class="pro"><div class="pro-top"><div class="avatar">TP</div><div><h3>TP Normandie <span class="verified">✓ Vérifié</span></h3><small>Terrassement · VRD</small></div></div><div class="stars">★ 4,8 <span style="color:#8390a0">(127 avis)</span></div><p>Spécialiste du terrassement, des réseaux et de l'aménagement de terrains. Intervention dans un rayon de 40 km.</p><div class="pro-footer"><small>📍 12 km · Compatible 96%</small><button class="primary" onclick="showPro('TP Normandie')">Voir le profil</button></div></article>
+<article class="pro"><div class="pro-top"><div class="avatar">A76</div><div><h3>Aménagement 76 <span class="verified">✓ Vérifié</span></h3><small>Terrasse · Paysage</small></div></div><div class="stars">★ 4,9 <span style="color:#8390a0">(89 avis)</span></div><p>Création de terrasses, cours, clôtures et espaces paysagers pour particuliers.</p><div class="pro-footer"><small>📍 18 km · Compatible 92%</small><button class="primary" onclick="showPro('Aménagement 76')">Voir le profil</button></div></article>
+<article class="pro"><div class="pro-top"><div class="avatar">NP</div><div><h3>Nature & Paysage <span class="verified">✓ Vérifié</span></h3><small>Paysagiste · Jardin</small></div></div><div class="stars">★ 4,7 <span style="color:#8390a0">(64 avis)</span></div><p>Conception et entretien de jardins, plantations, clôtures et aménagements extérieurs.</p><div class="pro-footer"><small>📍 21 km · Compatible 87%</small><button class="primary" onclick="showPro('Nature & Paysage')">Voir le profil</button></div></article>
+</div>
+</section>
+
+<section class="section app" id="fonctionnement">
+<div class="head" style="justify-content:center;text-align:center"><div><span class="eyebrow">SIMPLE ET TRANSPARENT</span><h2>Comment ça marche ?</h2></div></div>
+<div class="steps"><div class="step"><span>01</span><h3>Décrivez votre projet</h3><p>Quelques questions, votre localisation, vos photos et votre budget indicatif.</p></div><div class="step"><span>02</span><h3>Matching</h3><p>Nous identifions les métiers nécessaires et les professionnels compatibles.</p></div><div class="step"><span>03</span><h3>Comparez</h3><p>Recevez des réponses, échangez et comparez les devis au même endroit.</p></div><div class="step"><span>04</span><h3>Choisissez</h3><p>Vous gardez le contrôle. Une fois le pro choisi, votre dossier reste votre fil conducteur.</p></div></div>
+</section>
+
+<section class="section" id="espace">
+<div class="head"><div><span class="eyebrow">ESPACE PROFESSIONNEL</span><h2>Développez votre activité</h2></div><button class="primary" onclick="showProSignup()">Créer mon profil pro</button></div>
+<div class="workspace"><aside class="side"><h4>Entreprise</h4><button class="active">▦ Tableau de bord</button><button>⌁ Nouvelles demandes</button><button>▤ Mes devis</button><button>⌂ Mes chantiers</button><button>◌ Messages</button><button>★ Mes avis</button></aside>
+<div class="content-card"><div style="display:flex;justify-content:space-between;align-items:end"><div><span class="eyebrow">TABLEAU DE BORD</span><h2 style="margin:7px 0">Votre activité</h2></div><button class="ghost" style="color:#25364a;border-color:var(--line)">30 derniers jours⌄</button></div>
+<div class="stats" style="margin-top:22px"><div class="stat"><small>Demandes reçues</small><strong>28</strong><em>+16%</em></div><div class="stat"><small>Devis envoyés</small><strong>16</strong><em>+12%</em></div><div class="stat"><small>Chantiers gagnés</small><strong>7</strong><em>+8%</em></div><div class="stat"><small>CA potentiel</small><strong>24 500 €</strong><em>+26%</em></div></div>
+<div class="cards"><div class="inner"><h3>Demandes récentes</h3><div class="project"><div><strong>Terrassement pour maison</strong><small>Budget 8–12 k€ · 14 km</small></div><button class="primary" onclick="alert('Dans la version connectée : ouvrir le dossier prospect.')">Voir</button></div><div class="project"><div><strong>Création d'une terrasse</strong><small>Budget 5–7 k€ · 18 km</small></div><button class="primary">Voir</button></div><div class="project"><div><strong>Clôture avec portail</strong><small>Budget 2–4 k€ · 9 km</small></div><button class="primary">Voir</button></div></div><div class="inner"><h3>Profil professionnel</h3><p style="font-size:12px;color:var(--muted)">Vérification SIRET · assurances · zones · métiers · réalisations · avis.</p><div class="badge" style="display:inline-block">Profil 92% complet</div><button class="primary" style="display:block;margin-top:16px" onclick="showProSignup()">Compléter mon profil</button></div></div>
+</div></div>
+</section>
+
+
+<section class="section" id="backend">
+  <div class="content-card">
+    <span class="eyebrow">CONNEXION À LA BASE DE DONNÉES</span>
+    <h2>CONTACTONPRO est prêt pour Supabase</h2>
+    <p style="color:var(--muted);font-size:13px;line-height:1.6">
+      Le site reste utilisable immédiatement en mode démonstration. Pour passer en production,
+      il faut créer le projet Supabase puis renseigner l’URL et la clé publique ci-dessous.
+      <b>Ne mets jamais une clé secrète/service-role dans le navigateur.</b>
+    </p>
+    <label>Supabase URL</label>
+    <input id="sbUrl" value="https://zefbpgzousgyvcnbikfl.supabase.co" readonly>
+    <label>Supabase anon/public key</label>
+    <input id="sbKey" placeholder="eyJhbGciOi...">
+    <button class="primary" onclick="saveBackendV5()">Enregistrer la connexion</button> <button class="primary" onclick="testSupabaseConnection()">Tester la connexion</button>
+    <div id="backendMsg" class="backend-status">Aucune connexion configurée.</div>
+  </div>
+</section>
+<footer><div class="brand">CONTACTONPRO</div><p>Votre projet. Les bons professionnels. Un seul endroit.</p><span>V13 · France</span></footer><div class="toast" id="toast"></div>
+
+<div class="modal" id="wizard">
+<div class="modal-box">
+<button class="close" onclick="closeModal('wizard')">×</button>
+<span class="eyebrow">NOUVEAU PROJET</span><h2>Décrivez votre chantier</h2><p style="color:var(--muted);font-size:12px">Étape <span id="stepNo">1</span>/4 · aucun engagement.</p><div class="progress"><span id="progress"></span></div>
+<div id="step1"><label>Quel type de projet ?</label><div class="choice-grid" id="choices"></div><button class="primary full" onclick="nextStep()">Continuer →</button></div>
+<div id="step2" class="hidden"><label>Décrivez votre besoin</label><textarea id="desc" rows="5" placeholder="Ex. Je veux décaisser mon terrain, évacuer les terres et préparer une plateforme pour une maison..."></textarea><div class="row"><div><label>Ville / code postal</label><input id="city" placeholder="76120"></div><div><label>Budget indicatif</label><select id="budget"><option>Je ne sais pas</option><option>Moins de 5 000 €</option><option>5 000–10 000 €</option><option>10 000–20 000 €</option><option>20 000 € et +</option></select></div></div><button class="primary full" onclick="nextStep()">Continuer →</button></div>
+<div id="step3" class="hidden"><label>Ajoutez des photos (optionnel)</label><input type="file" id="photos" accept="image/*" multiple><label>Délai souhaité</label><select id="delay"><option>Dès que possible</option><option>Dans 1–3 mois</option><option>Dans 3–6 mois</option><option>Plus tard</option></select><button class="primary full" onclick="nextStep()">Voir mon récapitulatif →</button></div>
+<div id="step4" class="hidden"><h3>Votre dossier est prêt</h3><div class="inner"><p id="summary" style="font-size:12px;line-height:1.7"></p></div><button class="primary full" onclick="submitProject()">Créer mon dossier →</button></div>
+</div></div>
+
+
+<div class="modal" id="authModal">
+  <div class="modal-card auth-modal">
+    <button class="modal-close" onclick="closeModal('authModal')">×</button>
+    <span class="eyebrow">ESPACE PERSONNEL</span>
+    <h2 id="authTitle">Créer un compte</h2>
+    <div class="auth-tabs">
+      <button id="tabSignup" class="active" onclick="setAuthMode('signup')">Créer un compte</button>
+      <button id="tabLogin" onclick="setAuthMode('login')">Se connecter</button>
+    </div>
+    <div id="authFields">
+      <label>Nom</label><input id="authName" placeholder="Votre nom">
+      <label>E-mail</label><input id="authEmail" type="email" placeholder="vous@email.fr">
+      <label>Mot de passe</label><input id="authPassword" type="password" placeholder="••••••••">
+      <label>Je suis</label>
+      <select id="authRole"><option value="client">Un particulier / client</option><option value="pro">Un professionnel</option></select>
+      <button class="primary full" onclick="submitAuth()">Créer mon compte</button>
+    </div>
+    <div class="backend-status" id="backendStatus">Mode démonstration : connexion locale. Après création du projet Supabase, les comptes seront stockés en ligne.</div>
+  </div>
+</div>
+<div class="modal" id="infoModal"><div class="modal-box"><button class="close" onclick="closeModal('infoModal')">×</button><div id="infoContent"></div></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>\nconst CONTACTONPRO_SUPABASE_URL = "https://zefbpgzousgyvcnbikfl.supabase.co";
+const TYPES=["Terrassement / VRD","Maçonnerie / Gros œuvre","Aménagement extérieur","Jardinage / Paysage","Rénovation","Clôtures / Portails","Toiture","Plomberie / Chauffage","Électricité","Autre"];
+const PROS=[
+ {name:"TP Normandie",initials:"TP",skills:["Terrassement / VRD","Aménagement extérieur"],distance:12,rating:4.8,reviews:127,match:96,zone:"Seine-Maritime · rayon 40 km"},
+ {name:"Aménagement 76",initials:"A76",skills:["Aménagement extérieur","Clôtures / Portails"],distance:18,rating:4.9,reviews:89,match:92,zone:"Seine-Maritime · rayon 35 km"},
+ {name:"Nature & Paysage",initials:"NP",skills:["Jardinage / Paysage","Aménagement extérieur"],distance:21,rating:4.7,reviews:64,match:87,zone:"Seine-Maritime · rayon 30 km"}
+];
+
+let state=JSON.parse(localStorage.getItem("contactonpro")||"null")||{projects:[],pro:null,quotes:[],messages:[]};
+let selectedType="",step=1;
+
+function save(){localStorage.setItem("contactonpro",JSON.stringify(state));renderClient();updateMetrics()}
+function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");clearTimeout(window._toast);window._toast=setTimeout(()=>t.classList.remove("show"),2600)}
+function updateMetrics(){document.getElementById("metricProjects").textContent=state.projects.length}
+function esc(s){return String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+
+const choices=document.getElementById("choices");
+TYPES.forEach(t=>{const b=document.createElement("button");b.className="choice";b.textContent=t;b.onclick=()=>{document.querySelectorAll(".choice").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");selectedType=t};choices.appendChild(b)});
+
+function openWizard(prefill=""){step=1;selectedType=prefill||"";document.querySelectorAll(".choice").forEach(x=>x.classList.toggle("selected",x.textContent===prefill));updateWizard();document.getElementById("wizard").classList.add("open")}
+function closeModal(id){document.getElementById(id).classList.remove("open")}
+function updateWizard(){for(let i=1;i<=4;i++)document.getElementById("step"+i).classList.toggle("hidden",i!==step);document.getElementById("stepNo").textContent=step;document.getElementById("progress").style.width=(step*25)+"%"}
+function nextStep(){
+ if(step===1&&!selectedType){toast("Choisissez un type de projet.");return}
+ if(step===2&&!document.getElementById("desc").value.trim()){toast("Décrivez votre besoin.");return}
+ if(step<4)step++;
+ if(step===4){
+  const p=state.projects.length+1;
+  document.getElementById("summary").innerHTML="<b>"+esc(selectedType)+"</b><br>"+esc(document.getElementById("desc").value)+"<br><br>📍 "+esc(document.getElementById("city").value||"Localisation à préciser")+"<br>💰 "+esc(document.getElementById("budget").value)+"<br>📅 "+esc(document.getElementById("delay").value);
+ }
+ updateWizard()
+}
+function submitProject(){
+ const p={id:Date.now(),ref:"CP-"+String(state.projects.length+1).padStart(4,"0"),type:selectedType,desc:document.getElementById("desc").value.trim(),city:document.getElementById("city").value.trim(),budget:document.getElementById("budget").value,delay:document.getElementById("delay").value,date:new Date().toLocaleDateString("fr-FR"),status:"Recherche de professionnels",matches:PROS.filter(x=>x.skills.includes(selectedType)).length?PROS.filter(x=>x.skills.includes(selectedType)):PROS.slice(0,2),quotes:[]};
+ state.projects.unshift(p);save();closeModal("wizard");toast("Votre dossier "+p.ref+" a été créé.");renderClient();document.getElementById("projet").scrollIntoView({behavior:"smooth"})
+}
+function quickSearch(){const c=document.getElementById("quickCategory").value,l=document.getElementById("quickLocation").value.trim();openWizard(c);step=2;document.getElementById("desc").value="Je recherche un professionnel pour : "+c;document.getElementById("city").value=l;updateWizard()}
+
+function renderClient(tab="overview"){
+ const root=document.getElementById("clientView");
+ if(!state.projects.length){
+  root.innerHTML=`<div class="notice"><b>Votre espace est prêt.</b><br>Créez votre premier projet pour déclencher le matching de démonstration et voir les réponses des professionnels au même endroit.</div>
+  <div style="margin-top:22px"><span class="eyebrow">AUCUN DOSSIER</span><h2 style="margin:7px 0">Commencez par décrire votre chantier</h2><p style="color:var(--muted);font-size:13px">Le formulaire recueille le métier, la description, la localisation, le budget, le délai et les photos.</p><button class="primary" onclick="openWizard()">Créer mon projet →</button></div>`;
+  return;
+ }
+ const p=state.projects[0];
+ if(tab==="requests"){root.innerHTML=`<span class="eyebrow">MES DEMANDES</span><h2 style="margin:7px 0">Professionnels compatibles</h2><div class="result-list">${p.matches.map((x,i)=>`<div class="result"><div class="result-top"><div><b>${esc(x.name)}</b> <span class="verified">✓ Vérifié</span><br><small>${esc(x.skills.join(" · "))} · ${x.distance} km</small></div><span class="badge">${x.match}% compatible</span></div><div class="stars">★ ${x.rating} <span style="color:#8390a0">(${x.reviews} avis)</span></div><button class="primary" onclick="requestQuote(${i})">Demander un devis</button></div>`).join("")}</div>`;return}
+ if(tab==="quotes"){root.innerHTML=`<span class="eyebrow">MES DEVIS</span><h2 style="margin:7px 0">Propositions reçues</h2>${p.quotes.length?'<div class="result-list">'+p.quotes.map(q=>`<div class="result quote-row"><div><b>${esc(q.pro)}</b><br><small>${esc(q.message)}</small></div><strong>${q.amount.toLocaleString("fr-FR")} €</strong></div>`).join("")+'</div>':'<div class="empty">Aucun devis pour le moment. Demandez un devis aux professionnels compatibles.</div>'}`;return}
+ if(tab==="messages"){root.innerHTML=`<span class="eyebrow">MESSAGES</span><h2 style="margin:7px 0">Conversation</h2><div class="message">CONTACTONPRO : votre dossier <b>${p.ref}</b> est transmis aux professionnels sélectionnés.</div>${state.messages.map(m=>`<div class="message ${m.me?"me":""}"><b>${esc(m.author)}</b><br>${esc(m.text)}</div>`).join("")}<div style="display:flex;gap:8px;margin-top:12px"><input id="msgInput" placeholder="Écrire un message..." style="flex:1;border:1px solid var(--line);border-radius:9px;padding:12px"><button class="primary" onclick="sendMessage()">Envoyer</button></div>`;return}
+ root.innerHTML=`<div style="display:flex;justify-content:space-between;align-items:end"><div><span class="eyebrow">DOSSIER ${p.ref}</span><h2 style="margin:7px 0">${esc(p.type)}</h2></div><span class="badge">${esc(p.status)}</span></div>
+ <p style="color:var(--muted);font-size:13px">${esc(p.city||"Localisation non précisée")} · ${esc(p.budget)} · ${esc(p.delay)}</p>
+ <div class="stats"><div class="stat"><small>Pros compatibles</small><strong>${p.matches.length}</strong><em>matching</em></div><div class="stat"><small>Devis reçus</small><strong>${p.quotes.length}</strong><em>à comparer</em></div><div class="stat"><small>Budget</small><strong>${esc(p.budget).replace("–","-")}</strong><em>indicatif</em></div><div class="stat"><small>Créé le</small><strong>${p.date}</strong><em>CONTACTONPRO</em></div></div>
+ <div class="cards"><div class="inner"><h3>Votre demande</h3><p style="font-size:12px;color:var(--muted);line-height:1.6">${esc(p.desc)}</p><button class="primary" onclick="renderClient('requests')">Voir les professionnels →</button></div><div class="inner"><h3>Prochaine étape</h3><p style="font-size:12px;color:var(--muted);line-height:1.6">Choisissez les professionnels à qui envoyer votre demande. Dans une version connectée, ils recevront une notification et pourront répondre avec leur devis.</p><button class="primary" onclick="renderClient('requests')">Lancer le matching</button></div></div>`;
+}
+
+function switchDashboard(tab){renderClient(tab)}
+function requestQuote(index){
+ const p=state.projects[0], pro=p.matches[index];
+ if(p.quotes.some(q=>q.pro===pro.name)){toast("Demande déjà envoyée à "+pro.name);return}
+ const amount=[7800,5600,3900][index%3];
+ p.quotes.push({pro:pro.name,amount,message:"Demande reçue — devis indicatif de démonstration."});
+ p.status="Demandes envoyées";state.messages.push({author:pro.name,text:"Bonjour, nous avons bien reçu votre demande. Nous revenons vers vous avec les détails.",me:false});save();toast("Demande envoyée à "+pro.name);renderClient("quotes")
+}
+function sendMessage(){const i=document.getElementById("msgInput");if(!i||!i.value.trim())return;state.messages.push({author:"Vous",text:i.value.trim(),me:true});save();renderClient("messages");toast("Message envoyé")}
+function showLogin(){document.getElementById("infoContent").innerHTML="<span class='eyebrow'>CONNEXION</span><h2>Bienvenue sur CONTACTONPRO</h2><p style='color:var(--muted);font-size:13px'>Prototype : la connexion réelle (compte, mot de passe, sécurité) sera branchée au backend lors de la mise en production.</p><button class='primary full' onclick=\"closeModal('infoModal')\">Fermer</button>";document.getElementById("infoModal").classList.add("open")}
+function showPro(name){const p=PROS.find(x=>x.name===name)||PROS[0];document.getElementById("infoContent").innerHTML=`<span class="eyebrow">PROFIL PROFESSIONNEL</span><h2>${esc(p.name)} <span style="color:#1769f3;font-size:15px">✓ Vérifié</span></h2><p style="color:var(--muted);font-size:13px">★ ${p.rating} · ${p.reviews} avis · ${p.distance} km · ${p.match}% compatible.</p><div class="list"><div><b>Spécialités</b><br>${esc(p.skills.join(", "))}</div><div><b>Zone</b><br>${esc(p.zone)}</div><div><b>Fonctionnement</b><br>Dans la version production, le profil affichera SIRET, assurances, réalisations, disponibilités et avis vérifiés.</div></div><button class="primary full" onclick="closeModal('infoModal');openWizard('${esc(p.skills[0])}')">Demander un devis</button>`;document.getElementById("infoModal").classList.add("open")}
+function showProSignup(){document.getElementById("infoContent").innerHTML=`<span class="eyebrow">ESPACE PROFESSIONNEL</span><h2>Créer votre profil professionnel</h2><p style="color:var(--muted);font-size:13px">Cette version enregistre une fiche pro localement. Le contrôle SIRET et les justificatifs seront connectés au backend ensuite.</p><label>Nom de l'entreprise</label><input id="proName" placeholder="Ex. Dupont TP"><label>SIRET</label><input id="proSiret" placeholder="14 chiffres"><label>Métiers</label><input id="proSkills" placeholder="Terrassement, VRD..."><button class="primary full" onclick="savePro()">Créer mon profil</button>`;document.getElementById("infoModal").classList.add("open")}
+function savePro(){state.pro={name:document.getElementById("proName").value.trim(),siret:document.getElementById("proSiret").value.trim(),skills:document.getElementById("proSkills").value.trim()};save();closeModal("infoModal");toast("Profil professionnel enregistré.");document.getElementById("espace").scrollIntoView({behavior:"smooth"})}
+window.addEventListener("click",e=>{if(e.target.classList.contains("modal"))e.target.classList.remove("open")});
+renderClient();updateMetrics();
+
+</script>
+
+<script>
+const CONTACTONPRO_URL = "https://zefbpgzousgyvcnbikfl.supabase.co";
+let CONTACTONPRO_KEY = "";
+
+function getSavedSupabaseKey(){
+  try { return (JSON.parse(localStorage.getItem("contactonpro_supabase")||"{}").key)||""; }
+  catch(e){ return ""; }
+}
+function setSupabaseStatus(text, ok=false){
+  const el=document.getElementById("backendMsg");
+  if(el){el.textContent=text;el.classList.toggle("ok",ok)}
+}
+async function testSupabaseConnection(){
+  const key=(document.getElementById("sbKey")?.value||getSavedSupabaseKey()).trim();
+  if(!key){setSupabaseStatus("Colle d'abord ta clé publiable sb_publishable_…");return}
+  if(!window.supabase){setSupabaseStatus("La bibliothèque Supabase ne s'est pas chargée.");return}
+  const client=window.supabase.createClient(CONTACTONPRO_URL,key);
+  const {data,error}=await client.from("profiles").select("id").limit(1);
+  if(error){
+    setSupabaseStatus("Connexion refusée : "+error.message,false);
+    return;
+  }
+  CONTACTONPRO_KEY=key;
+  localStorage.setItem("contactonpro_supabase",JSON.stringify({url:CONTACTONPRO_URL,key}));
+  setSupabaseStatus("✅ CONTACTONPRO est connecté à Supabase.",true);
+}
+function saveBackendV5(){
+  const key=(document.getElementById("sbKey")?.value||"").trim();
+  if(!key){setSupabaseStatus("La clé publiable est obligatoire.");return}
+  localStorage.setItem("contactonpro_supabase",JSON.stringify({url:CONTACTONPRO_URL,key}));
+  setSupabaseStatus("Configuration enregistrée. Appuie sur « Tester la connexion ».");  
+}
+</script>
+
+<script>
+(function(){
+  const SB_URL = "https://zefbpgzousgyvcnbikfl.supabase.co";
+  let sb = null;
+
+  function toastV6(msg){
+    const t=document.getElementById("toast");
+    if(t){t.textContent=msg;t.classList.add("show");clearTimeout(window.__t);window.__t=setTimeout(()=>t.classList.remove("show"),2600);}
+    else alert(msg);
+  }
+  function closeV6(id){const x=document.getElementById(id);if(x)x.classList.remove("open");}
+  function openV6(){const x=document.getElementById("authModal");if(x)x.classList.add("open");}
+  window.contactonOpenAuth=openV6;
+
+  function initSB(){
+    const key=(localStorage.getItem("contactonpro_supabase_key")||"").trim();
+    if(window.supabase && key) sb=window.supabase.createClient(SB_URL,key);
+    return !!sb;
+  }
+
+  window.contactonSaveKey=async function(){
+    const key=(document.getElementById("sbKey")?.value||"").trim();
+    if(!key){toastV6("Colle ta clé publiable sb_publishable_…");return;}
+    localStorage.setItem("contactonpro_supabase_key",key);
+    if(initSB()){
+      const {error}=await sb.from("profiles").select("id").limit(1);
+      if(error){toastV6("Clé enregistrée, mais test refusé : "+error.message);return;}
+      const s=document.getElementById("backendMsg");
+      if(s){s.textContent="✅ CONTACTONPRO est connecté à Supabase.";s.classList.add("ok");}
+      toastV6("Connexion Supabase réussie.");
+    }
+  };
+
+  window.contactonSubmitAuth=async function(){
+    const email=(document.getElementById("authEmail")?.value||"").trim();
+    const password=document.getElementById("authPassword")?.value||"";
+    const name=(document.getElementById("authName")?.value||"").trim();
+    const role=document.getElementById("authRole")?.value||"client";
+    if(!email||!password){toastV6("E-mail et mot de passe requis.");return;}
+    if(!initSB()){toastV6("Ajoute d'abord ta clé publiable dans la section Supabase.");return;}
+
+    const btn=document.querySelector("#authFields button");
+    if(btn)btn.disabled=true;
+    try{
+      const {data,error}=await sb.auth.signUp({email,password});
+      if(error) throw error;
+      if(data.user){
+        const {error:pErr}=await sb.from("profiles").upsert({
+          id:data.user.id, role, full_name:name||"Utilisateur"
+        });
+        if(pErr) throw pErr;
+      }
+      closeV6("authModal");
+      toastV6("Compte créé. Vérifie ton e-mail si Supabase le demande.");
+    }catch(e){toastV6("Erreur : "+e.message);}
+    finally{if(btn)btn.disabled=false;}
+  };
+
+  window.contactonLogin=async function(){
+    const email=(document.getElementById("authEmail")?.value||"").trim();
+    const password=document.getElementById("authPassword")?.value||"";
+    if(!email||!password){toastV6("E-mail et mot de passe requis.");return;}
+    if(!initSB()){toastV6("Ajoute d'abord ta clé publiable.");return;}
+    const {data,error}=await sb.auth.signInWithPassword({email,password});
+    if(error){toastV6("Connexion impossible : "+error.message);return;}
+    closeV6("authModal");toastV6("Connexion réussie.");
+    const pill=document.getElementById("sessionPill");if(pill)pill.textContent=email;
+  };
+
+  window.contactonSetAuthMode=function(mode){
+    const signup=document.getElementById("tabSignup"),login=document.getElementById("tabLogin");
+    const title=document.getElementById("authTitle"),name=document.getElementById("authName"),role=document.getElementById("authRole");
+    const btn=document.querySelector("#authFields button");
+    if(signup)signup.classList.toggle("active",mode==="signup");
+    if(login)login.classList.toggle("active",mode==="login");
+    if(title)title.textContent=mode==="signup"?"Créer un compte":"Se connecter";
+    if(name)name.style.display=mode==="signup"?"":"none";
+    if(role)role.style.display=mode==="signup"?"":"none";
+    if(btn){btn.textContent=mode==="signup"?"Créer mon compte":"Se connecter";btn.onclick=mode==="signup"?window.contactonSubmitAuth:window.contactonLogin;}
+  };
+
+  // Wire buttons even if the earlier script didn't.
+  document.addEventListener("DOMContentLoaded",()=>{
+    const key=localStorage.getItem("contactonpro_supabase_key")||"";
+    const input=document.getElementById("sbKey");if(input)input.value=key;
+    const btn=document.querySelector("#authFields button");
+    if(btn)btn.onclick=window.contactonSubmitAuth;
+    const s=document.getElementById("backendMsg");
+    if(key && s)s.textContent="Clé Supabase enregistrée sur cet appareil. Prêt à tester.";
+  });
+})();
+</script>
+
+<script>
+window.openAuth=window.contactonOpenAuth;
+window.setAuthMode=window.contactonSetAuthMode;
+</script>
+
+<script>
+(function(){
+  const URLV7="https://zefbpgzousgyvcnbikfl.supabase.co";
+  function readKey(){
+    const keys=["contactonpro_supabase_key","contactonpro_supabase"];
+    for(const k of keys){
+      try{
+        const raw=localStorage.getItem(k);
+        if(!raw) continue;
+        if(raw.startsWith("sb_publishable_")) return raw;
+        const obj=JSON.parse(raw);
+        if(obj && obj.key) return obj.key;
+      }catch(e){}
+    }
+    return "";
+  }
+  document.addEventListener("DOMContentLoaded",()=>{
+    const key=readKey();
+    const input=document.getElementById("sbKey");
+    if(input && key) input.value=key;
+    if(key) localStorage.setItem("contactonpro_supabase_key",key);
+  });
+})();
+</script>
+
+<script>
+(function(){
+  const URLV7="https://zefbpgzousgyvcnbikfl.supabase.co";
+  window.contactonGetKey=function(){
+    const input=document.getElementById("sbKey");
+    if(input && input.value.trim()) return input.value.trim();
+    try{
+      const k=localStorage.getItem("contactonpro_supabase_key");
+      if(k)return k;
+      const o=JSON.parse(localStorage.getItem("contactonpro_supabase")||"{}");
+      return o.key||"";
+    }catch(e){return "";}
+  };
+  window.contactonSaveKeyV7=function(){
+    const key=window.contactonGetKey();
+    if(!key){alert("Colle ta clé publiable sb_publishable_…");return;}
+    localStorage.setItem("contactonpro_supabase_key",key);
+    localStorage.setItem("contactonpro_supabase",JSON.stringify({url:URLV7,key}));
+    const s=document.getElementById("backendMsg");
+    if(s){s.textContent="✅ Clé publiable enregistrée sur cet appareil.";s.classList.add("ok");}
+  };
+  window.contactonSubmitAuthV7=async function(){
+    const email=(document.getElementById("authEmail")?.value||"").trim();
+    const password=document.getElementById("authPassword")?.value||"";
+    const name=(document.getElementById("authName")?.value||"").trim();
+    const role=(document.getElementById("authRole")?.value||"client");
+    const key=window.contactonGetKey();
+    if(!email||!password){alert("E-mail et mot de passe requis.");return;}
+    if(!window.supabase){alert("La bibliothèque Supabase n'est pas chargée.");return;}
+    if(!key){alert("Ajoute d'abord ta clé publiable dans la section Supabase.");return;}
+    const client=window.supabase.createClient(URLV7,key);
+    const {data,error}=await client.auth.signUp({email,password});
+    if(error){alert("Erreur Supabase : "+error.message);return;}
+    if(data.user){
+      const p=await client.from("profiles").upsert({
+        id:data.user.id, role:role, full_name:name||"Utilisateur"
+      });
+      if(p.error){alert("Compte créé, mais profil non enregistré : "+p.error.message);return;}
+    }
+    const m=document.getElementById("authModal");if(m)m.classList.remove("open");
+    alert("Compte créé ! Vérifie ton e-mail si Supabase demande une confirmation.");
+  };
+})();
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+  const btn=document.querySelector("#authFields button");
+  if(btn) btn.onclick=window.contactonSubmitAuthV7;
+  const oldSave=document.querySelector('#backend button[onclick*="saveBackend"]');
+  if(oldSave) oldSave.onclick=window.contactonSaveKeyV7;
+});
+</script>
+
+<script>
+(function(){
+  const CP_URL = "https://zefbpgzousgyvcnbikfl.supabase.co";
+  function cpKey(){
+    try{
+      const direct=localStorage.getItem("contactonpro_supabase_key");
+      if(direct) return direct.trim();
+      const obj=JSON.parse(localStorage.getItem("contactonpro_supabase")||"{}");
+      return (obj.key||"").trim();
+    }catch(e){return "";}
+  }
+  function cpClient(){
+    const k=cpKey();
+    return (window.supabase && k) ? window.supabase.createClient(CP_URL,k) : null;
+  }
+  function cpAlert(m){alert(m);}
+  async function cpProfile(sb,user){
+    const name=(document.getElementById("authName")?.value||"").trim() || user.email.split("@")[0];
+    const role=document.getElementById("authRole")?.value||"client";
+    const r=await sb.from("profiles").upsert(
+      {id:user.id,role:role,full_name:name},
+      {onConflict:"id"}
+    );
+    return r.error||null;
+  }
+  window.contactonSignupV8=async function(){
+    const email=(document.getElementById("authEmail")?.value||"").trim();
+    const password=document.getElementById("authPassword")?.value||"";
+    const sb=cpClient();
+    if(!sb){cpAlert("Clé Supabase introuvable. Enregistre ta clé publiable dans CONTACTONPRO.");return;}
+    if(!email||!password){cpAlert("E-mail et mot de passe requis.");return;}
+    const r=await sb.auth.signUp({
+      email:email,password:password,
+      options:{emailRedirectTo:window.location.origin+window.location.pathname}
+    });
+    if(r.error){cpAlert("Création refusée : "+r.error.message);return;}
+    if(r.data.user && r.data.session){
+      const pe=await cpProfile(sb,r.data.user);
+      if(pe){cpAlert("Compte créé, mais profil non enregistré : "+pe.message);return;}
+      document.getElementById("authModal")?.classList.remove("open");
+      cpAlert("✅ Compte créé et profil enregistré.");
+    }else{
+      cpAlert("✅ Compte créé. Vérifie ton e-mail puis reconnecte-toi.");
+    }
+  };
+  window.contactonLoginV8=async function(){
+    const email=(document.getElementById("authEmail")?.value||"").trim();
+    const password=document.getElementById("authPassword")?.value||"";
+    const sb=cpClient();
+    if(!sb){cpAlert("Clé Supabase introuvable. Enregistre ta clé publiable dans CONTACTONPRO.");return;}
+    if(!email||!password){cpAlert("E-mail et mot de passe requis.");return;}
+    const r=await sb.auth.signInWithPassword({email,password});
+    if(r.error){cpAlert("Connexion refusée : "+r.error.message);return;}
+    const pe=await cpProfile(sb,r.data.user);
+    if(pe){cpAlert("Connexion réussie, mais profil non enregistré : "+pe.message);return;}
+    document.getElementById("authModal")?.classList.remove("open");
+    cpAlert("✅ Connexion réussie et profil enregistré.");
+  };
+  document.addEventListener("DOMContentLoaded",function(){
+    const btn=document.querySelector("#authFields button");
+    const signup=document.getElementById("tabSignup");
+    const login=document.getElementById("tabLogin");
+    function mode(type){
+      const name=document.getElementById("authName");
+      const role=document.getElementById("authRole");
+      const title=document.getElementById("authTitle");
+      if(name)name.style.display=type==="signup"?"":"none";
+      if(role)role.style.display=type==="signup"?"":"none";
+      if(title)title.textContent=type==="signup"?"Créer un compte":"Se connecter";
+      if(btn)btn.onclick=type==="signup"?window.contactonSignupV8:window.contactonLoginV8;
+      signup?.classList.toggle("active",type==="signup");
+      login?.classList.toggle("active",type==="login");
+    }
+    window.openAuth=function(){
+      document.getElementById("authModal")?.classList.add("open");
+      mode("signup");
+    };
+    window.setAuthMode=mode;
+    if(btn)btn.onclick=window.contactonSignupV8;
+    signup?.addEventListener("click",()=>mode("signup"));
+    login?.addEventListener("click",()=>mode("login"));
+    const key=cpKey();
+    const keyInput=document.getElementById("sbKey");
+    if(keyInput&&key)keyInput.value=key;
+  });
+})();
+</script>
+
+
+<style>
+/* V11: clean auth modal behavior */
+#authModal[aria-hidden="true"]{display:none!important}
+#authModal .modal-close{cursor:pointer}
+</style>
+<script>
+(function(){
+  const SB_URL="https://zefbpgzousgyvcnbikfl.supabase.co";
+
+  function key(){
+    try{
+      const direct=localStorage.getItem("contactonpro_supabase_key");
+      if(direct) return direct.trim();
+      const o=JSON.parse(localStorage.getItem("contactonpro_supabase")||"{}");
+      return (o.key||"").trim();
+    }catch(e){return "";}
+  }
+
+  function client(){
+    const k=key();
+    return (window.supabase && k) ? window.supabase.createClient(SB_URL,k) : null;
+  }
+
+  function closeAuth(){
+    const m=document.getElementById("authModal");
+    if(!m)return;
+    m.classList.remove("open");
+    m.style.display="none";
+    m.setAttribute("aria-hidden","true");
+  }
+
+  function openAuth(){
+    const m=document.getElementById("authModal");
+    if(!m)return;
+    m.style.display="flex";
+    m.classList.add("open");
+    m.setAttribute("aria-hidden","false");
+    setMode("signup");
+  }
+
+  function setSession(email){
+    const pill=document.getElementById("sessionPill");
+    if(pill) pill.textContent="🟢 "+(email||"Connecté");
+    try{
+      localStorage.setItem("contactonpro_logged_in","1");
+      localStorage.setItem("contactonpro_logged_email",email||"");
+    }catch(e){}
+  }
+
+  function toast(msg){
+    const t=document.getElementById("toast");
+    if(t){
+      t.textContent=msg;
+      t.classList.add("show");
+      clearTimeout(window.__cpv11toast);
+      window.__cpv11toast=setTimeout(()=>t.classList.remove("show"),3000);
+    }
+  }
+
+  function setMode(mode){
+    const signup=mode==="signup";
+    const name=document.getElementById("authName");
+    const role=document.getElementById("authRole");
+    const title=document.getElementById("authTitle");
+    const btn=document.querySelector("#authFields button");
+    document.getElementById("tabSignup")?.classList.toggle("active",signup);
+    document.getElementById("tabLogin")?.classList.toggle("active",!signup);
+    if(title) title.textContent=signup?"Créer un compte":"Se connecter";
+    if(name) name.style.display=signup?"":"none";
+    if(role) role.style.display=signup?"":"none";
+    if(btn){
+      btn.textContent=signup?"Créer mon compte":"Se connecter";
+      btn.onclick=signup?signupAccount:loginAccount;
+    }
+  }
+
+  async function signupAccount(){
+    const email=(document.getElementById("authEmail")?.value||"").trim();
+    const password=document.getElementById("authPassword")?.value||"";
+    const name=(document.getElementById("authName")?.value||"").trim()||"Utilisateur";
+    const role=document.getElementById("authRole")?.value||"client";
+    const sb=client();
+    if(!sb){toast("Clé Supabase introuvable.");return;}
+    if(!email||!password){toast("E-mail et mot de passe requis.");return;}
+
+    const btn=document.querySelector("#authFields button");
+    if(btn)btn.disabled=true;
+    try{
+      const r=await sb.auth.signUp({
+        email,password,
+        options:{emailRedirectTo:window.location.origin+window.location.pathname}
+      });
+      if(r.error)throw r.error;
+
+      if(r.data.user && r.data.session){
+        const p=await sb.from("profiles").upsert(
+          {id:r.data.user.id,role,full_name:name},
+          {onConflict:"id"}
+        );
+        if(p.error)throw p.error;
+        setSession(email);
+        closeAuth();
+        toast("✅ Compte créé et profil enregistré.");
+      }else{
+        closeAuth();
+        toast("✅ Compte créé. Vérifie ton e-mail puis reconnecte-toi.");
+      }
+    }catch(e){
+      toast("❌ "+e.message);
+    }finally{
+      if(btn)btn.disabled=false;
+    }
+  }
+
+  async function loginAccount(){
+    const email=(document.getElementById("authEmail")?.value||"").trim();
+    const password=document.getElementById("authPassword")?.value||"";
+    const sb=client();
+    if(!sb){toast("Clé Supabase introuvable.");return;}
+    if(!email||!password){toast("E-mail et mot de passe requis.");return;}
+
+    const btn=document.querySelector("#authFields button");
+    if(btn)btn.disabled=true;
+    try{
+      const r=await sb.auth.signInWithPassword({email,password});
+      if(r.error)throw r.error;
+
+      setSession(r.data.user?.email||email);
+      closeAuth();
+      toast("✅ Connexion réussie.");
+    }catch(e){
+      toast("❌ Connexion impossible : "+e.message);
+    }finally{
+      if(btn)btn.disabled=false;
+    }
+  }
+
+  window.contactonOpenAuth=openAuth;
+  window.openAuth=openAuth;
+  window.setAuthMode=setMode;
+  window.contactonSetAuthMode=setMode;
+  window.contactonLoginV8=loginAccount;
+  window.contactonSignupV8=signupAccount;
+
+  document.addEventListener("DOMContentLoaded",async function(){
+    const m=document.getElementById("authModal");
+    if(m){
+      m.setAttribute("aria-hidden","true");
+      m.style.display="none";
+      m.addEventListener("click",e=>{if(e.target===m)closeAuth();});
+      m.querySelector(".modal-close")?.addEventListener("click",closeAuth);
+    }
+
+    document.getElementById("tabSignup")?.addEventListener("click",()=>setMode("signup"));
+    document.getElementById("tabLogin")?.addEventListener("click",()=>setMode("login"));
+
+    const sb=client();
+    if(sb){
+      const r=await sb.auth.getSession();
+      if(r.data?.session?.user){
+        setSession(r.data.session.user.email||"Connecté");
+      }
+      sb.auth.onAuthStateChange((_event,session)=>{
+        if(session?.user)setSession(session.user.email||"Connecté");
+      });
+    }
+  });
+})();
+</script>
+
+
+<style>
+.account-modal{max-width:560px}
+.account-head{display:flex;align-items:center;gap:14px;padding-right:35px}
+.account-avatar{width:58px;height:58px;border-radius:16px;background:#eaf1ff;color:#1769f3;display:grid;place-items:center;font-size:25px;font-weight:900}
+.account-head h2{margin:0;font-size:24px}
+.account-head small{color:var(--muted)}
+.account-status{margin-top:6px;color:#16824a;font-size:11px;font-weight:800}
+.account-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.account-item{background:#f7f9fb;border:1px solid var(--line);border-radius:12px;padding:15px;text-align:left}
+.account-item strong{display:block;font-size:13px}
+.account-item small{display:block;color:var(--muted);margin-top:5px;font-size:11px}
+.account-item:hover{background:#eaf1ff;border-color:#cfe0ff}
+.account-danger{width:100%;margin-top:16px;background:#fff1f1;color:#b42318;border:1px solid #ffd5d2;border-radius:10px;padding:12px;font-weight:800}
+.account-projects{margin-top:20px}
+.account-project{border:1px solid var(--line);border-radius:11px;padding:13px;margin-top:9px;display:flex;justify-content:space-between;gap:10px}
+@media(max-width:600px){.account-grid{grid-template-columns:1fr}}
+</style>
+<script>
+(function(){
+  const SB_URL="https://zefbpgzousgyvcnbikfl.supabase.co";
+
+  function getKey(){
+    try{
+      const a=localStorage.getItem("contactonpro_supabase_key");
+      if(a)return a.trim();
+      const o=JSON.parse(localStorage.getItem("contactonpro_supabase")||"{}");
+      return (o.key||"").trim();
+    }catch(e){return "";}
+  }
+  function sb(){
+    const k=getKey();
+    return window.supabase&&k?window.supabase.createClient(SB_URL,k):null;
+  }
+  function closeAuth(){
+    const m=document.getElementById("authModal");
+    if(m){m.classList.remove("open");m.style.display="none";}
+  }
+  function closeAccount(){
+    document.getElementById("accountModalV12")?.remove();
+  }
+
+  async function openAccount(){
+    const client=sb();
+    let user=null;
+    if(client){
+      const r=await client.auth.getSession();
+      user=r.data?.session?.user||null;
+    }
+    if(!user){
+      try{
+        if(localStorage.getItem("contactonpro_logged_in")==="1"){
+          const email=localStorage.getItem("contactonpro_logged_email")||"";
+          user={email};
+        }
+      }catch(e){}
+    }
+    if(!user){
+      window.contactonOpenAuth?.();
+      return;
+    }
+
+    closeAccount();
+    const email=user.email||"";
+    const initial=(email.charAt(0)||"U").toUpperCase();
+    const projects=(window.state&&Array.isArray(window.state.projects))?window.state.projects:[];
+    const projectHtml=projects.length
+      ? projects.slice(0,4).map(p=>`<div class="account-project"><div><strong>${escapeHtmlV12(p.type||"Projet")}</strong><small>${escapeHtmlV12(p.city||"Localisation non précisée")} · ${escapeHtmlV12(p.status||"En cours")}</small></div><span class="badge">${escapeHtmlV12(p.status||"En cours")}</span></div>`).join("")
+      : `<div class="empty">Aucun projet pour le moment.<br><button class="primary" style="margin-top:10px" onclick="closeAccountV12();openWizard()">Décrire mon projet</button></div>`;
+
+    const m=document.createElement("div");
+    m.id="accountModalV12";
+    m.className="modal open";
+    m.innerHTML=`
+      <div class="modal-box account-modal">
+        <button class="close" type="button" aria-label="Fermer">×</button>
+        <div class="account-head">
+          <div class="account-avatar">${initial}</div>
+          <div>
+            <h2>Mon compte</h2>
+            <small>${escapeHtmlV12(email)}</small>
+            <div class="account-status">● Connecté</div>
+          </div>
+        </div>
+
+        <div class="account-grid">
+          <button class="account-item" onclick="accountActionV12('projects')"><strong>🏗️ Mes projets</strong><small>Suivre l’avancement de mes chantiers</small></button>
+          <button class="account-item" onclick="accountActionV12('requests')"><strong>📋 Mes demandes</strong><small>Voir les professionnels contactés</small></button>
+          <button class="account-item" onclick="accountActionV12('quotes')"><strong>💶 Mes devis</strong><small>Comparer les propositions reçues</small></button>
+          <button class="account-item" onclick="accountActionV12('messages')"><strong>💬 Messages</strong><small>Échanger avec les professionnels</small></button>
+          <button class="account-item" onclick="accountActionV12('profile')"><strong>👤 Mon profil</strong><small>Gérer mes informations</small></button>
+          <button class="account-item" onclick="openWizard();closeAccountV12()"><strong>➕ Nouveau projet</strong><small>Décrire un nouveau chantier</small></button>
+        </div>
+
+        <div class="account-projects">
+          <span class="eyebrow">MES PROJETS</span>
+          ${projectHtml}
+        </div>
+
+        <button class="account-danger" onclick="logoutV12()">Déconnexion</button>
+      </div>`;
+    document.body.appendChild(m);
+    m.querySelector(".close").onclick=closeAccount;
+    m.addEventListener("click",e=>{if(e.target===m)closeAccount();});
+  }
+
+  function escapeHtmlV12(v){
+    return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  }
+
+  window.closeAccountV12=closeAccount;
+  window.openAccountV12=openAccount;
+
+  window.accountActionV12=function(tab){
+    closeAccount();
+    const el=document.getElementById("espace");
+    if(el)el.scrollIntoView({behavior:"smooth"});
+    setTimeout(()=>window.switchDashboard?.(tab==="projects"?"client":tab),250);
+  };
+
+  window.logoutV12=async function(){
+    const client=sb();
+    if(client) await client.auth.signOut();
+    try{
+      localStorage.removeItem("contactonpro_logged_in");
+      localStorage.removeItem("contactonpro_logged_email");
+    }catch(e){}
+    const pill=document.getElementById("sessionPill");
+    if(pill)pill.textContent="Visiteur";
+    closeAccount();
+    toastV6?.("Vous êtes déconnecté.");
+  };
+
+  document.addEventListener("DOMContentLoaded",function(){
+    const buttons=document.querySelectorAll('.authbar button');
+    buttons.forEach(b=>{
+      b.onclick=function(e){e.preventDefault();openAccount();};
+    });
+  });
+})();
+</script>
+
+
+<style>
+.cp13-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:99999;display:flex;align-items:center;justify-content:center;padding:18px}.cp13-card{width:min(720px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:18px;padding:22px;position:relative}.cp13-close{position:absolute;right:14px;top:10px;border:0;background:transparent;font-size:28px}.cp13-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.cp13-full{grid-column:1/-1}.cp13-card label{display:block;font-weight:700;font-size:13px;margin-bottom:6px}.cp13-card input,.cp13-card select,.cp13-card textarea{width:100%;box-sizing:border-box;border:1px solid #d9dee5;border-radius:10px;padding:11px;font:inherit}.cp13-card textarea{min-height:110px}.cp13-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:18px}.cp13-primary{border:0;border-radius:10px;padding:12px 18px;font-weight:800;background:#1769f3;color:#fff}.cp13-secondary{border:1px solid #d9dee5;background:#fff;border-radius:10px;padding:12px 18px;font-weight:700}@media(max-width:620px){.cp13-grid{grid-template-columns:1fr}.cp13-full{grid-column:auto}}
+</style>
+<script>
+(function(){
+const URL="https://zefbpgzousgyvcnbikfl.supabase.co";
+function key(){try{return(localStorage.getItem("contactonpro_supabase_key")||JSON.parse(localStorage.getItem("contactonpro_supabase")||"{}").key||"").trim()}catch(e){return""}}
+function db(){const k=key();return window.supabase&&k?window.supabase.createClient(URL,k):null}
+async function user(){const s=db();if(!s)return null;const r=await s.auth.getSession();return r.data?.session?.user||null}
+function close(){document.getElementById("cp13ProjectModal")?.remove()}
+window.openProjectV13=async function(){
+if(!await user()){alert("Connecte-toi avant de créer un projet.");window.contactonOpenAuth?.();return}
+close();const m=document.createElement("div");m.id="cp13ProjectModal";m.className="cp13-overlay";
+m.innerHTML=`<div class="cp13-card"><button class="cp13-close">×</button><h2>Décrire mon projet</h2><p>Décris ton chantier pour recevoir des propositions de professionnels.</p><div class="cp13-grid"><div><label>Type de travaux *</label><select id="cp13Type"><option value="">Choisir...</option><option>Terrassement</option><option>Maçonnerie</option><option>Voirie / réseaux</option><option>Aménagement extérieur</option><option>Jardinage / espaces verts</option><option>Rénovation</option><option>Construction</option><option>Autre</option></select></div><div><label>Commune *</label><input id="cp13City" placeholder="Ex. Grand-Couronne"></div><div class="cp13-full"><label>Description *</label><textarea id="cp13Description" placeholder="Décris ton chantier, dimensions, accès, contraintes..."></textarea></div><div><label>Budget estimatif (€)</label><input id="cp13Budget" type="number" min="0"></div><div><label>Date souhaitée</label><input id="cp13Date" type="date"></div><div class="cp13-full"><label>Photos / documents</label><input id="cp13Files" type="file" multiple accept="image/*,.pdf"><small>L'envoi des fichiers sera activé à l'étape suivante.</small></div></div><div class="cp13-actions"><button class="cp13-secondary" id="cp13Cancel">Annuler</button><button class="cp13-primary" id="cp13Publish">Publier mon projet</button></div></div>`;
+document.body.appendChild(m);m.querySelector(".cp13-close").onclick=close;m.querySelector("#cp13Cancel").onclick=close;m.onclick=e=>{if(e.target===m)close()};
+m.querySelector("#cp13Publish").onclick=async()=>{const s=db(),u=await user(),type=document.getElementById("cp13Type").value,city=document.getElementById("cp13City").value.trim(),description=document.getElementById("cp13Description").value.trim(),budget=document.getElementById("cp13Budget").value,date=document.getElementById("cp13Date").value||null;if(!type||!city||!description){alert("Remplis les champs obligatoires.");return}const r=await s.from("projects").insert({user_id:u.id,title:type+" — "+city,type,description,city,budget:budget?Number(budget):null,desired_date:date,status:"Publié"}).select().single();if(r.error){alert("Formulaire OK. La table projects doit maintenant être configurée dans Supabase : "+r.error.message);return}close();alert("✅ Projet publié et enregistré.");window.openAccountV12?.()}
+};
+window.openWizard=window.openProjectV13;
+document.addEventListener("DOMContentLoaded",()=>document.querySelectorAll('[onclick*="openWizard"],[onclick*="Décrire mon projet"],[onclick*="Nouveau projet"]').forEach(b=>b.onclick=e=>{e.preventDefault();openProjectV13()}));
+})();
+</script>
+
+</body></html>
