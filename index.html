@@ -1,0 +1,1324 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CONTACTONPRO — V19.1</title>
+<style>
+:root{--navy:#07172a;--blue:#1769f3;--ink:#102033;--muted:#6d7c8e;--line:#dfe6ee;--bg:#f5f7fa;--card:#fff;--green:#16824a;--soft:#eaf1ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.hidden{display:none!important}.brand{font-weight:900;font-size:23px;letter-spacing:-1px;color:#fff;text-decoration:none}.brand b{color:#4d8cff}.top{height:70px;background:var(--navy);color:#fff;display:flex;align-items:center;padding:0 5vw;gap:28px;position:sticky;top:0;z-index:20}.top nav{display:flex;gap:24px;flex:1}.top nav a{color:#cbd8e7;text-decoration:none;font-size:13px}.top-actions{display:flex;gap:8px}.ghost,.location{background:transparent;color:#fff;border:1px solid #30445e;border-radius:9px;padding:10px 13px}.primary{background:var(--blue);color:#fff;border-radius:9px;padding:11px 16px;font-weight:800}.hero{background:var(--navy);color:#fff;padding:70px 5vw 80px;display:grid;grid-template-columns:1fr 1fr;gap:55px}.eyebrow{font-size:10px;font-weight:900;letter-spacing:1.5px;color:#4d8cff}.hero h1{font-size:clamp(40px,5vw,66px);line-height:1.02;letter-spacing:-3px;margin:15px 0}.hero h1 em{font-style:normal;color:#4d8cff}.hero p{color:#b9c8d9;line-height:1.65;max-width:600px}.hero-actions{display:flex;gap:18px;align-items:center;margin-top:28px}.link{color:#dbe8ff;text-decoration:none;font-weight:800}.hero-card{background:#0d243e;border:1px solid #24425f;border-radius:18px;padding:25px;align-self:center;box-shadow:0 25px 70px #0004}.hero-card h3{margin:5px 0 15px}.search{display:grid;grid-template-columns:1.2fr 1fr auto;gap:9px}.search input,.search select{background:#fff;border:0;border-radius:9px;padding:13px;color:#263548}.trust{display:flex;gap:28px;margin-top:35px}.trust strong{display:block;font-size:19px}.trust small{color:#9fb0c3}.section{padding:65px 5vw}.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px}.head h2{margin:7px 0 0;font-size:31px;letter-spacing:-1px}.categories{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.cat{background:#fff;border:1px solid var(--line);border-radius:13px;padding:18px;text-align:left;min-height:105px;transition:.2s}.cat:hover{transform:translateY(-3px);box-shadow:0 10px 25px #0b26420c}.cat i{font-style:normal;font-size:25px}.cat strong{display:block;margin-top:12px;font-size:13px}.cat small{color:var(--muted)}.app{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);min-height:600px}.tabs{display:flex;gap:8px;margin-bottom:22px}.tab{padding:10px 14px;border-radius:8px;background:#edf2f7;color:#526276;font-weight:800}.tab.active{background:var(--navy);color:#fff}.workspace{display:grid;grid-template-columns:235px 1fr;gap:18px}.side,.content-card,.profile-card{background:#fff;border:1px solid var(--line);border-radius:14px}.side{padding:17px}.side h4{font-size:11px;color:#8a97a6;text-transform:uppercase;letter-spacing:1px}.side button{display:block;width:100%;text-align:left;background:transparent;padding:11px;border-radius:8px;color:#5f6e80}.side button.active{background:#eaf1ff;color:#1769f3;font-weight:800}.content-card{padding:24px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:11px}.stat{border:1px solid var(--line);border-radius:11px;padding:15px}.stat small{color:var(--muted)}.stat strong{display:block;font-size:23px;margin-top:7px}.stat em{color:var(--green);font-style:normal;font-size:10px}.cards{display:grid;grid-template-columns:1.2fr .8fr;gap:15px;margin-top:15px}.inner{border:1px solid var(--line);border-radius:12px;padding:17px}.inner h3{font-size:14px;margin-top:0}.project{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-top:1px solid var(--line)}.project small{display:block;color:var(--muted);margin-top:4px}.badge{background:#eaf7ef;color:#177a46;border-radius:99px;padding:6px 8px;font-size:10px;font-weight:800;height:max-content}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}.step span{display:grid;place-items:center;width:35px;height:35px;background:var(--soft);color:var(--blue);border-radius:9px;font-weight:900}.step h3{font-size:15px}.step p{font-size:12px;color:var(--muted);line-height:1.6}.pros{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.pro{background:#fff;border:1px solid var(--line);border-radius:14px;padding:19px}.pro-top{display:flex;gap:12px;align-items:center}.avatar{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,#9cb6c7,#536b7a);display:grid;place-items:center;color:#fff;font-weight:900}.pro h3{margin:0;font-size:14px}.verified{color:var(--blue);font-size:11px}.stars{color:#f39a12;font-size:12px;margin:11px 0}.pro p{font-size:12px;color:var(--muted);line-height:1.5}.pro-footer{display:flex;justify-content:space-between;align-items:center;margin-top:16px}.pro-footer small{color:var(--muted)}.profile{display:grid;grid-template-columns:1fr 1fr;gap:18px}.profile-card{padding:25px}.profile-hero{display:flex;gap:15px;align-items:center}.profile-hero .avatar{width:64px;height:64px}.profile-card h2{margin:0}.list{margin-top:20px}.list div{padding:12px 0;border-top:1px solid var(--line);font-size:12px}.modal{position:fixed;inset:0;background:#041326bb;display:none;align-items:center;justify-content:center;padding:18px;z-index:50}.modal.open{display:flex}.modal-box{width:min(650px,100%);background:#fff;border-radius:17px;padding:28px;position:relative;max-height:90vh;overflow:auto}.close{position:absolute;right:15px;top:14px;background:#edf1f5;border-radius:50%;width:32px;height:32px;font-size:21px}.modal h2{margin:5px 0;font-size:29px}.progress{height:5px;background:#e6ebf1;border-radius:5px;margin:20px 0}.progress span{display:block;width:25%;height:100%;background:var(--blue)}.modal label{display:block;font-size:12px;font-weight:800;margin:14px 0 6px}.modal input,.modal select,.modal textarea{width:100%;border:1px solid var(--line);border-radius:9px;padding:12px}.modal .row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.full{width:100%;margin-top:18px}.choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.choice{padding:13px;background:#f2f5f8;border:1px solid #e1e7ed;border-radius:9px;text-align:left}.choice.selected{border-color:var(--blue);background:#eaf1ff;color:var(--blue);font-weight:800}footer{background:var(--navy);color:#aebed0;padding:40px 5vw;display:flex;gap:25px;align-items:center}footer p{flex:1;font-size:12px}@media(max-width:900px){.top nav{display:none}.hero{grid-template-columns:1fr}.categories{grid-template-columns:repeat(3,1fr)}.workspace,.profile{grid-template-columns:1fr}.side{display:none}.stats{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr}.pros{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}}@media(max-width:600px){.top{padding:0 16px}.top-actions .ghost,.location{display:none}.hero,.section{padding-left:17px;padding-right:17px}.hero{padding-top:45px}.hero h1{font-size:43px}.search{grid-template-columns:1fr}.categories{grid-template-columns:1fr 1fr}.trust{display:grid;grid-template-columns:1fr 1fr}.stats{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.modal .row{grid-template-columns:1fr}.choice-grid{grid-template-columns:1fr}footer{flex-direction:column;align-items:flex-start}}
+
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:#07172a;color:#fff;padding:13px 17px;border-radius:10px;box-shadow:0 14px 40px #0003;opacity:0;pointer-events:none;transition:.25s;z-index:100;font-size:13px}.toast.show{opacity:1;transform:translate(-50%,0)}.result-list{display:grid;gap:10px;margin-top:15px}.result{border:1px solid var(--line);border-radius:11px;padding:14px;background:#fff}.result-top{display:flex;justify-content:space-between;gap:12px}.result small{color:var(--muted)}.quote-row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;border-top:1px solid var(--line);padding:13px 0}.message{padding:11px 13px;border-radius:11px;background:#eef3f8;margin:8px 0;font-size:12px}.message.me{background:#eaf1ff;margin-left:15%}.empty{padding:24px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:11px}.notice{background:#eef6ff;border:1px solid #cfe2ff;color:#28496e;border-radius:11px;padding:13px;font-size:12px;line-height:1.5;margin-top:15px}
+
+.authbar{display:flex;gap:8px;align-items:center}.userpill{border:1px solid var(--line);padding:8px 11px;border-radius:999px;background:#fff;font-size:12px}.rolepill{font-size:10px;border-radius:999px;padding:4px 7px;background:#eaf1ff;color:#1769f3}.auth-modal{max-width:520px}.auth-tabs{display:flex;gap:6px;margin:14px 0}.auth-tabs button{flex:1;padding:11px;border:1px solid var(--line);border-radius:9px;background:#fff}.auth-tabs .active{background:#07172a;color:#fff}.backend-status{font-size:11px;padding:7px 10px;border-radius:8px;background:#fff4df;color:#815900;margin-top:10px}.backend-status.ok{background:#eaf8ef;color:#146b35}
+</style>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="#home">CONTACTONPRO</a>
+<nav><a href="#projet">Mon projet</a><a href="#pros">Trouver un pro</a><a href="#fonctionnement">Comment ça marche</a><a href="#espace">Espace pro</a></nav>
+<div class="top-actions"><button class="location">⌖ 76</button><button class="ghost" onclick="showLogin()">Se connecter</button><button class="primary" onclick="openWizard()">Décrire mon projet</button></div>
+<div class="authbar"><span id="sessionPill" class="userpill">Visiteur</span><button class="primary" type="button" onclick="window.contactonOpenAuth()">Compte</button></div></header>
+
+<section class="hero" id="home">
+<div>
+<span class="eyebrow">LA PLATEFORME DE VOS TRAVAUX</span>
+<h1>Votre projet.<br>Les bons professionnels.<br><em>Un seul endroit.</em></h1>
+<p>Décrivez votre chantier une seule fois. CONTACTONPRO organise votre demande et vous met en relation avec des professionnels adaptés, du terrassement au jardinage.</p>
+<div class="hero-actions"><button class="primary" onclick="openWizard()">Décrire mon projet en 2 minutes →</button><a class="link" href="#pros">Explorer les professionnels</a></div>
+<div class="trust"><div><strong id="metricPros">3</strong><small>pros de démonstration</small></div><div><strong id="metricProjects">0</strong><small>projets créés ici</small></div><div><strong>Prototype</strong><small>fonctionnel localement</small></div></div>
+</div>
+<div class="hero-card"><span class="eyebrow">RECHERCHER UN PROFESSIONNEL</span><h3>Quel est votre besoin ?</h3><div class="search"><select id="quickCategory"><option>Terrassement / VRD</option><option>Maçonnerie</option><option>Aménagement extérieur</option><option>Jardinage / Paysage</option><option>Toiture</option><option>Plomberie</option><option>Électricité</option></select><input id="quickLocation" placeholder="Ville ou code postal"><button class="primary" onclick="quickSearch()">Rechercher</button></div><p style="font-size:11px;color:#91a6bb">Ex. « terrassement 76120 » — vous pourrez ensuite détailler votre projet.</p></div>
+</section>
+
+<section class="section" id="projet">
+<div class="head"><div><span class="eyebrow">MON PROJET</span><h2>Un chantier, un dossier clair</h2></div><button class="primary" onclick="openWizard()">Créer un projet</button></div>
+<div class="workspace">
+<aside class="side"><h4>Mon espace</h4><button class="active" onclick="switchDashboard('client')">▦ Vue d'ensemble</button><button onclick="switchDashboard('requests')">⌁ Mes demandes</button><button onclick="switchDashboard('quotes')">▤ Mes devis</button><button onclick="switchDashboard('messages')">◌ Messages</button><button onclick="switchDashboard('profile')">⚙ Mon profil</button></aside>
+<div class="content-card" id="clientDash">
+<div id="clientView"></div>
+</div></div>
+</div>
+</section>
+
+<section class="section" id="pros">
+<div class="head"><div><span class="eyebrow">PROFESSIONNELS</span><h2>Des pros adaptés à votre projet</h2></div><span style="color:var(--muted);font-size:12px">Seine-Maritime · 0–40 km</span></div>
+<div class="pros">
+<article class="pro"><div class="pro-top"><div class="avatar">TP</div><div><h3>TP Normandie <span class="verified">✓ Vérifié</span></h3><small>Terrassement · VRD</small></div></div><div class="stars">★ 4,8 <span style="color:#8390a0">(127 avis)</span></div><p>Spécialiste du terrassement, des réseaux et de l'aménagement de terrains. Intervention dans un rayon de 40 km.</p><div class="pro-footer"><small>📍 12 km · Compatible 96%</small><button class="primary" onclick="showPro('TP Normandie')">Voir le profil</button></div></article>
+<article class="pro"><div class="pro-top"><div class="avatar">A76</div><div><h3>Aménagement 76 <span class="verified">✓ Vérifié</span></h3><small>Terrasse · Paysage</small></div></div><div class="stars">★ 4,9 <span style="color:#8390a0">(89 avis)</span></div><p>Création de terrasses, cours, clôtures et espaces paysagers pour particuliers.</p><div class="pro-footer"><small>📍 18 km · Compatible 92%</small><button class="primary" onclick="showPro('Aménagement 76')">Voir le profil</button></div></article>
+<article class="pro"><div class="pro-top"><div class="avatar">NP</div><div><h3>Nature & Paysage <span class="verified">✓ Vérifié</span></h3><small>Paysagiste · Jardin</small></div></div><div class="stars">★ 4,7 <span style="color:#8390a0">(64 avis)</span></div><p>Conception et entretien de jardins, plantations, clôtures et aménagements extérieurs.</p><div class="pro-footer"><small>📍 21 km · Compatible 87%</small><button class="primary" onclick="showPro('Nature & Paysage')">Voir le profil</button></div></article>
+</div>
+</section>
+
+<section class="section app" id="fonctionnement">
+<div class="head" style="justify-content:center;text-align:center"><div><span class="eyebrow">SIMPLE ET TRANSPARENT</span><h2>Comment ça marche ?</h2></div></div>
+<div class="steps"><div class="step"><span>01</span><h3>Décrivez votre projet</h3><p>Quelques questions, votre localisation, vos photos et votre budget indicatif.</p></div><div class="step"><span>02</span><h3>Matching</h3><p>Nous identifions les métiers nécessaires et les professionnels compatibles.</p></div><div class="step"><span>03</span><h3>Comparez</h3><p>Recevez des réponses, échangez et comparez les devis au même endroit.</p></div><div class="step"><span>04</span><h3>Choisissez</h3><p>Vous gardez le contrôle. Une fois le pro choisi, votre dossier reste votre fil conducteur.</p></div></div>
+</section>
+
+
+<section class="section" id="espace">
+  <div class="head">
+    <div><span class="eyebrow">ESPACE PROFESSIONNEL</span><h2>Développez votre activité</h2></div>
+    <button class="primary" id="cp191ProAction">Ouvrir mon espace pro</button>
+  </div>
+  <div class="workspace" id="cp191ProWorkspace">
+    <aside class="side" id="cp191ProSide">
+      <h4>Entreprise</h4>
+      <button class="active" data-protab="dashboard">▦ Tableau de bord</button>
+      <button data-protab="jobs">⌁ Chantiers disponibles</button>
+      <button data-protab="responses">▤ Mes devis</button>
+      <button data-protab="messages">◌ Messages</button>
+      <button data-protab="profile">⚙ Mon entreprise</button>
+    </aside>
+    <div class="content-card">
+      <div id="cp191ProMain"></div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="backend">
+  <div class="content-card">
+    <span class="eyebrow">CONNEXION À LA BASE DE DONNÉES</span>
+    <h2>CONTACTONPRO est prêt pour Supabase</h2>
+    <p style="color:var(--muted);font-size:13px;line-height:1.6">
+      Le site reste utilisable immédiatement en mode démonstration. Pour passer en production,
+      il faut créer le projet Supabase puis renseigner l’URL et la clé publique ci-dessous.
+      <b>Ne mets jamais une clé secrète/service-role dans le navigateur.</b>
+    </p>
+    <label>Supabase URL</label>
+    <input id="sbUrl" value="https://zefbpgzousgyvcnbikfl.supabase.co" readonly>
+    <label>Supabase anon/public key</label>
+    <input id="sbKey" placeholder="eyJhbGciOi...">
+    <button class="primary" onclick="saveBackendV5()">Enregistrer la connexion</button> <button class="primary" onclick="testSupabaseConnection()">Tester la connexion</button>
+    <div id="backendMsg" class="backend-status">Aucune connexion configurée.</div>
+  </div>
+</section>
+<footer><div class="brand">CONTACTONPRO</div><p>Votre projet. Les bons professionnels. Un seul endroit.</p><span>V15 · France</span></footer><div class="toast" id="toast"></div>
+
+<div class="modal" id="wizard">
+<div class="modal-box">
+<button class="close" onclick="closeModal('wizard')">×</button>
+<span class="eyebrow">NOUVEAU PROJET</span><h2>Décrivez votre chantier</h2><p style="color:var(--muted);font-size:12px">Étape <span id="stepNo">1</span>/4 · aucun engagement.</p><div class="progress"><span id="progress"></span></div>
+<div id="step1"><label>Quel type de projet ?</label><div class="choice-grid" id="choices"></div><button class="primary full" onclick="nextStep()">Continuer →</button></div>
+<div id="step2" class="hidden"><label>Décrivez votre besoin</label><textarea id="desc" rows="5" placeholder="Ex. Je veux décaisser mon terrain, évacuer les terres et préparer une plateforme pour une maison..."></textarea><div class="row"><div><label>Ville / code postal</label><input id="city" placeholder="76120"></div><div><label>Budget indicatif</label><select id="budget"><option>Je ne sais pas</option><option>Moins de 5 000 €</option><option>5 000–10 000 €</option><option>10 000–20 000 €</option><option>20 000 € et +</option></select></div></div><button class="primary full" onclick="nextStep()">Continuer →</button></div>
+<div id="step3" class="hidden"><label>Ajoutez des photos (optionnel)</label><input type="file" id="photos" accept="image/*" multiple><label>Délai souhaité</label><select id="delay"><option>Dès que possible</option><option>Dans 1–3 mois</option><option>Dans 3–6 mois</option><option>Plus tard</option></select><button class="primary full" onclick="nextStep()">Voir mon récapitulatif →</button></div>
+<div id="step4" class="hidden"><h3>Votre dossier est prêt</h3><div class="inner"><p id="summary" style="font-size:12px;line-height:1.7"></p></div><button class="primary full" onclick="submitProject()">Créer mon dossier →</button></div>
+</div></div>
+
+
+<div class="modal" id="authModal">
+  <div class="modal-card auth-modal">
+    <button class="modal-close" onclick="closeModal('authModal')">×</button>
+    <span class="eyebrow">ESPACE PERSONNEL</span>
+    <h2 id="authTitle">Créer un compte</h2>
+    <div class="auth-tabs">
+      <button id="tabSignup" class="active" onclick="setAuthMode('signup')">Créer un compte</button>
+      <button id="tabLogin" onclick="setAuthMode('login')">Se connecter</button>
+    </div>
+    <div id="authFields">
+      <label>Nom</label><input id="authName" placeholder="Votre nom">
+      <label>E-mail</label><input id="authEmail" type="email" placeholder="vous@email.fr">
+      <label>Mot de passe</label><input id="authPassword" type="password" placeholder="••••••••">
+      <label>Je suis</label>
+      <select id="authRole"><option value="client">Un particulier / client</option><option value="pro">Un professionnel</option></select>
+      <button class="primary full" onclick="submitAuth()">Créer mon compte</button>
+    </div>
+    <div class="backend-status" id="backendStatus">Mode démonstration : connexion locale. Après création du projet Supabase, les comptes seront stockés en ligne.</div>
+  </div>
+</div>
+<div class="modal" id="infoModal"><div class="modal-box"><button class="close" onclick="closeModal('infoModal')">×</button><div id="infoContent"></div></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>\nconst CONTACTONPRO_SUPABASE_URL = "https://zefbpgzousgyvcnbikfl.supabase.co";
+const TYPES=["Terrassement / VRD","Maçonnerie / Gros œuvre","Aménagement extérieur","Jardinage / Paysage","Rénovation","Clôtures / Portails","Toiture","Plomberie / Chauffage","Électricité","Autre"];
+const PROS=[
+ {name:"TP Normandie",initials:"TP",skills:["Terrassement / VRD","Aménagement extérieur"],distance:12,rating:4.8,reviews:127,match:96,zone:"Seine-Maritime · rayon 40 km"},
+ {name:"Aménagement 76",initials:"A76",skills:["Aménagement extérieur","Clôtures / Portails"],distance:18,rating:4.9,reviews:89,match:92,zone:"Seine-Maritime · rayon 35 km"},
+ {name:"Nature & Paysage",initials:"NP",skills:["Jardinage / Paysage","Aménagement extérieur"],distance:21,rating:4.7,reviews:64,match:87,zone:"Seine-Maritime · rayon 30 km"}
+];
+
+let state=JSON.parse(localStorage.getItem("contactonpro")||"null")||{projects:[],pro:null,quotes:[],messages:[]};
+let selectedType="",step=1;
+
+function save(){localStorage.setItem("contactonpro",JSON.stringify(state));renderClient();updateMetrics()}
+function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");clearTimeout(window._toast);window._toast=setTimeout(()=>t.classList.remove("show"),2600)}
+function updateMetrics(){document.getElementById("metricProjects").textContent=state.projects.length}
+function esc(s){return String(s||"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+
+const choices=document.getElementById("choices");
+TYPES.forEach(t=>{const b=document.createElement("button");b.className="choice";b.textContent=t;b.onclick=()=>{document.querySelectorAll(".choice").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");selectedType=t};choices.appendChild(b)});
+
+function openWizard(prefill=""){step=1;selectedType=prefill||"";document.querySelectorAll(".choice").forEach(x=>x.classList.toggle("selected",x.textContent===prefill));updateWizard();document.getElementById("wizard").classList.add("open")}
+function closeModal(id){document.getElementById(id).classList.remove("open")}
+function updateWizard(){for(let i=1;i<=4;i++)document.getElementById("step"+i).classList.toggle("hidden",i!==step);document.getElementById("stepNo").textContent=step;document.getElementById("progress").style.width=(step*25)+"%"}
+function nextStep(){
+ if(step===1&&!selectedType){toast("Choisissez un type de projet.");return}
+ if(step===2&&!document.getElementById("desc").value.trim()){toast("Décrivez votre besoin.");return}
+ if(step<4)step++;
+ if(step===4){
+  const p=state.projects.length+1;
+  document.getElementById("summary").innerHTML="<b>"+esc(selectedType)+"</b><br>"+esc(document.getElementById("desc").value)+"<br><br>📍 "+esc(document.getElementById("city").value||"Localisation à préciser")+"<br>💰 "+esc(document.getElementById("budget").value)+"<br>📅 "+esc(document.getElementById("delay").value);
+ }
+ updateWizard()
+}
+function submitProject(){
+ const p={id:Date.now(),ref:"CP-"+String(state.projects.length+1).padStart(4,"0"),type:selectedType,desc:document.getElementById("desc").value.trim(),city:document.getElementById("city").value.trim(),budget:document.getElementById("budget").value,delay:document.getElementById("delay").value,date:new Date().toLocaleDateString("fr-FR"),status:"Recherche de professionnels",matches:PROS.filter(x=>x.skills.includes(selectedType)).length?PROS.filter(x=>x.skills.includes(selectedType)):PROS.slice(0,2),quotes:[]};
+ state.projects.unshift(p);save();closeModal("wizard");toast("Votre dossier "+p.ref+" a été créé.");renderClient();document.getElementById("projet").scrollIntoView({behavior:"smooth"})
+}
+function quickSearch(){const c=document.getElementById("quickCategory").value,l=document.getElementById("quickLocation").value.trim();openWizard(c);step=2;document.getElementById("desc").value="Je recherche un professionnel pour : "+c;document.getElementById("city").value=l;updateWizard()}
+
+function renderClient(tab="overview"){
+ const root=document.getElementById("clientView");
+ if(!state.projects.length){
+  root.innerHTML=`<div class="notice"><b>Votre espace est prêt.</b><br>Créez votre premier projet pour déclencher le matching de démonstration et voir les réponses des professionnels au même endroit.</div>
+  <div style="margin-top:22px"><span class="eyebrow">AUCUN DOSSIER</span><h2 style="margin:7px 0">Commencez par décrire votre chantier</h2><p style="color:var(--muted);font-size:13px">Le formulaire recueille le métier, la description, la localisation, le budget, le délai et les photos.</p><button class="primary" onclick="openWizard()">Créer mon projet →</button></div>`;
+  return;
+ }
+ const p=state.projects[0];
+ if(tab==="requests"){root.innerHTML=`<span class="eyebrow">MES DEMANDES</span><h2 style="margin:7px 0">Professionnels compatibles</h2><div class="result-list">${p.matches.map((x,i)=>`<div class="result"><div class="result-top"><div><b>${esc(x.name)}</b> <span class="verified">✓ Vérifié</span><br><small>${esc(x.skills.join(" · "))} · ${x.distance} km</small></div><span class="badge">${x.match}% compatible</span></div><div class="stars">★ ${x.rating} <span style="color:#8390a0">(${x.reviews} avis)</span></div><button class="primary" onclick="requestQuote(${i})">Demander un devis</button></div>`).join("")}</div>`;return}
+ if(tab==="quotes"){root.innerHTML=`<span class="eyebrow">MES DEVIS</span><h2 style="margin:7px 0">Propositions reçues</h2>${p.quotes.length?'<div class="result-list">'+p.quotes.map(q=>`<div class="result quote-row"><div><b>${esc(q.pro)}</b><br><small>${esc(q.message)}</small></div><strong>${q.amount.toLocaleString("fr-FR")} €</strong></div>`).join("")+'</div>':'<div class="empty">Aucun devis pour le moment. Demandez un devis aux professionnels compatibles.</div>'}`;return}
+ if(tab==="messages"){root.innerHTML=`<span class="eyebrow">MESSAGES</span><h2 style="margin:7px 0">Conversation</h2><div class="message">CONTACTONPRO : votre dossier <b>${p.ref}</b> est transmis aux professionnels sélectionnés.</div>${state.messages.map(m=>`<div class="message ${m.me?"me":""}"><b>${esc(m.author)}</b><br>${esc(m.text)}</div>`).join("")}<div style="display:flex;gap:8px;margin-top:12px"><input id="msgInput" placeholder="Écrire un message..." style="flex:1;border:1px solid var(--line);border-radius:9px;padding:12px"><button class="primary" onclick="sendMessage()">Envoyer</button></div>`;return}
+ root.innerHTML=`<div style="display:flex;justify-content:space-between;align-items:end"><div><span class="eyebrow">DOSSIER ${p.ref}</span><h2 style="margin:7px 0">${esc(p.type)}</h2></div><span class="badge">${esc(p.status)}</span></div>
+ <p style="color:var(--muted);font-size:13px">${esc(p.city||"Localisation non précisée")} · ${esc(p.budget)} · ${esc(p.delay)}</p>
+ <div class="stats"><div class="stat"><small>Pros compatibles</small><strong>${p.matches.length}</strong><em>matching</em></div><div class="stat"><small>Devis reçus</small><strong>${p.quotes.length}</strong><em>à comparer</em></div><div class="stat"><small>Budget</small><strong>${esc(p.budget).replace("–","-")}</strong><em>indicatif</em></div><div class="stat"><small>Créé le</small><strong>${p.date}</strong><em>CONTACTONPRO</em></div></div>
+ <div class="cards"><div class="inner"><h3>Votre demande</h3><p style="font-size:12px;color:var(--muted);line-height:1.6">${esc(p.desc)}</p><button class="primary" onclick="renderClient('requests')">Voir les professionnels →</button></div><div class="inner"><h3>Prochaine étape</h3><p style="font-size:12px;color:var(--muted);line-height:1.6">Choisissez les professionnels à qui envoyer votre demande. Dans une version connectée, ils recevront une notification et pourront répondre avec leur devis.</p><button class="primary" onclick="renderClient('requests')">Lancer le matching</button></div></div>`;
+}
+
+function switchDashboard(tab){renderClient(tab)}
+function requestQuote(index){
+ const p=state.projects[0], pro=p.matches[index];
+ if(p.quotes.some(q=>q.pro===pro.name)){toast("Demande déjà envoyée à "+pro.name);return}
+ const amount=[7800,5600,3900][index%3];
+ p.quotes.push({pro:pro.name,amount,message:"Demande reçue — devis indicatif de démonstration."});
+ p.status="Demandes envoyées";state.messages.push({author:pro.name,text:"Bonjour, nous avons bien reçu votre demande. Nous revenons vers vous avec les détails.",me:false});save();toast("Demande envoyée à "+pro.name);renderClient("quotes")
+}
+function sendMessage(){const i=document.getElementById("msgInput");if(!i||!i.value.trim())return;state.messages.push({author:"Vous",text:i.value.trim(),me:true});save();renderClient("messages");toast("Message envoyé")}
+function showLogin(){document.getElementById("infoContent").innerHTML="<span class='eyebrow'>CONNEXION</span><h2>Bienvenue sur CONTACTONPRO</h2><p style='color:var(--muted);font-size:13px'>Prototype : la connexion réelle (compte, mot de passe, sécurité) sera branchée au backend lors de la mise en production.</p><button class='primary full' onclick=\"closeModal('infoModal')\">Fermer</button>";document.getElementById("infoModal").classList.add("open")}
+function showPro(name){const p=PROS.find(x=>x.name===name)||PROS[0];document.getElementById("infoContent").innerHTML=`<span class="eyebrow">PROFIL PROFESSIONNEL</span><h2>${esc(p.name)} <span style="color:#1769f3;font-size:15px">✓ Vérifié</span></h2><p style="color:var(--muted);font-size:13px">★ ${p.rating} · ${p.reviews} avis · ${p.distance} km · ${p.match}% compatible.</p><div class="list"><div><b>Spécialités</b><br>${esc(p.skills.join(", "))}</div><div><b>Zone</b><br>${esc(p.zone)}</div><div><b>Fonctionnement</b><br>Dans la version production, le profil affichera SIRET, assurances, réalisations, disponibilités et avis vérifiés.</div></div><button class="primary full" onclick="closeModal('infoModal');openWizard('${esc(p.skills[0])}')">Demander un devis</button>`;document.getElementById("infoModal").classList.add("open")}
+function showProSignup(){document.getElementById("infoContent").innerHTML=`<span class="eyebrow">ESPACE PROFESSIONNEL</span><h2>Créer votre profil professionnel</h2><p style="color:var(--muted);font-size:13px">Cette version enregistre une fiche pro localement. Le contrôle SIRET et les justificatifs seront connectés au backend ensuite.</p><label>Nom de l'entreprise</label><input id="proName" placeholder="Ex. Dupont TP"><label>SIRET</label><input id="proSiret" placeholder="14 chiffres"><label>Métiers</label><input id="proSkills" placeholder="Terrassement, VRD..."><button class="primary full" onclick="savePro()">Créer mon profil</button>`;document.getElementById("infoModal").classList.add("open")}
+function savePro(){state.pro={name:document.getElementById("proName").value.trim(),siret:document.getElementById("proSiret").value.trim(),skills:document.getElementById("proSkills").value.trim()};save();closeModal("infoModal");toast("Profil professionnel enregistré.");document.getElementById("espace").scrollIntoView({behavior:"smooth"})}
+window.addEventListener("click",e=>{if(e.target.classList.contains("modal"))e.target.classList.remove("open")});
+renderClient();updateMetrics();
+
+</script>
+
+<script>
+const CONTACTONPRO_URL = "https://zefbpgzousgyvcnbikfl.supabase.co";
+let CONTACTONPRO_KEY = "";
+
+function getSavedSupabaseKey(){
+  try { return (JSON.parse(localStorage.getItem("contactonpro_supabase")||"{}").key)||""; }
+  catch(e){ return ""; }
+}
+function setSupabaseStatus(text, ok=false){
+  const el=document.getElementById("backendMsg");
+  if(el){el.textContent=text;el.classList.toggle("ok",ok)}
+}
+async function testSupabaseConnection(){
+  const key=(document.getElementById("sbKey")?.value||getSavedSupabaseKey()).trim();
+  if(!key){setSupabaseStatus("Colle d'abord ta clé publiable sb_publishable_…");return}
+  if(!window.supabase){setSupabaseStatus("La bibliothèque Supabase ne s'est pas chargée.");return}
+  const client=window.supabase.createClient(CONTACTONPRO_URL,key);
+  const {data,error}=await client.from("profiles").select("id").limit(1);
+  if(error){
+    setSupabaseStatus("Connexion refusée : "+error.message,false);
+    return;
+  }
+  CONTACTONPRO_KEY=key;
+  localStorage.setItem("contactonpro_supabase",JSON.stringify({url:CONTACTONPRO_URL,key}));
+  setSupabaseStatus("✅ CONTACTONPRO est connecté à Supabase.",true);
+}
+function saveBackendV5(){
+  const key=(document.getElementById("sbKey")?.value||"").trim();
+  if(!key){setSupabaseStatus("La clé publiable est obligatoire.");return}
+  localStorage.setItem("contactonpro_supabase",JSON.stringify({url:CONTACTONPRO_URL,key}));
+  setSupabaseStatus("Configuration enregistrée. Appuie sur « Tester la connexion ».");  
+}
+</script>
+
+<script>
+(function(){
+  const SB_URL = "https://zefbpgzousgyvcnbikfl.supabase.co";
+  let sb = null;
+
+  function toastV6(msg){
+    const t=document.getElementById("toast");
+    if(t){t.textContent=msg;t.classList.add("show");clearTimeout(window.__t);window.__t=setTimeout(()=>t.classList.remove("show"),2600);}
+    else alert(msg);
+  }
+  function closeV6(id){const x=document.getElementById(id);if(x)x.classList.remove("open");}
+  function openV6(){const x=document.getElementById("authModal");if(x)x.classList.add("open");}
+  window.contactonOpenAuth=openV6;
+
+  function initSB(){
+    const key=(localStorage.getItem("contactonpro_supabase_key")||"").trim();
+    if(window.supabase && key) sb=window.supabase.createClient(SB_URL,key);
+    return !!sb;
+  }
+
+  window.contactonSaveKey=async function(){
+    const key=(document.getElementById("sbKey")?.value||"").trim();
+    if(!key){toastV6("Colle ta clé publiable sb_publishable_…");return;}
+    localStorage.setItem("contactonpro_supabase_key",key);
+    if(initSB()){
+      const {error}=await sb.from("profiles").select("id").limit(1);
+      if(error){toastV6("Clé enregistrée, mais test refusé : "+error.message);return;}
+      const s=document.getElementById("backendMsg");
+      if(s){s.textContent="✅ CONTACTONPRO est connecté à Supabase.";s.classList.add("ok");}
+      toastV6("Connexion Supabase réussie.");
+    }
+  };
+
+  window.contactonSubmitAuth=async function(){
+    const email=(document.getElementById("authEmail")?.value||"").trim();
+    const password=document.getElementById("authPassword")?.value||"";
+    const name=(document.getElementById("authName")?.value||"").trim();
+    const role=document.getElementById("authRole")?.value||"client";
+    if(!email||!password){toastV6("E-mail et mot de passe requis.");return;}
+    if(!initSB()){toastV6("Ajoute d'abord ta clé publiable dans la section Supabase.");return;}
+
+    const btn=document.querySelector("#authFields button");
+    if(btn)btn.disabled=true;
+    try{
+      const {data,error}=await sb.auth.signUp({email,password});
+      if(error) throw error;
+      if(data.user){
+        const {error:pErr}=await sb.from("profiles").upsert({
+          id:data.user.id, role, full_name:name||"Utilisateur"
+        });
+        if(pErr) throw pErr;
+      }
+      closeV6("authModal");
+      toastV6("Compte créé. Vérifie ton e-mail si Supabase le demande.");
+    }catch(e){toastV6("Erreur : "+e.message);}
+    finally{if(btn)btn.disabled=false;}
+  };
+
+  window.contactonLogin=async function(){
+    const email=(document.getElementById("authEmail")?.value||"").trim();
+    const password=document.getElementById("authPassword")?.value||"";
+    if(!email||!password){toastV6("E-mail et mot de passe requis.");return;}
+    if(!initSB()){toastV6("Ajoute d'abord ta clé publiable.");return;}
+    const {data,error}=await sb.auth.signInWithPassword({email,password});
+    if(error){toastV6("Connexion impossible : "+error.message);return;}
+    closeV6("authModal");toastV6("Connexion réussie.");
+    const pill=document.getElementById("sessionPill");if(pill)pill.textContent=email;
+  };
+
+  window.contactonSetAuthMode=function(mode){
+    const signup=document.getElementById("tabSignup"),login=document.getElementById("tabLogin");
+    const title=document.getElementById("authTitle"),name=document.getElementById("authName"),role=document.getElementById("authRole");
+    const btn=document.querySelector("#authFields button");
+    if(signup)signup.classList.toggle("active",mode==="signup");
+    if(login)login.classList.toggle("active",mode==="login");
+    if(title)title.textContent=mode==="signup"?"Créer un compte":"Se connecter";
+    if(name)name.style.display=mode==="signup"?"":"none";
+    if(role)role.style.display=mode==="signup"?"":"none";
+    if(btn){btn.textContent=mode==="signup"?"Créer mon compte":"Se connecter";btn.onclick=mode==="signup"?window.contactonSubmitAuth:window.contactonLogin;}
+  };
+
+  // Wire buttons even if the earlier script didn't.
+  document.addEventListener("DOMContentLoaded",()=>{
+    const key=localStorage.getItem("contactonpro_supabase_key")||"";
+    const input=document.getElementById("sbKey");if(input)input.value=key;
+    const btn=document.querySelector("#authFields button");
+    if(btn)btn.onclick=window.contactonSubmitAuth;
+    const s=document.getElementById("backendMsg");
+    if(key && s)s.textContent="Clé Supabase enregistrée sur cet appareil. Prêt à tester.";
+  });
+})();
+</script>
+
+<script>
+window.openAuth=window.contactonOpenAuth;
+window.setAuthMode=window.contactonSetAuthMode;
+</script>
+
+<script>
+(function(){
+  const URLV7="https://zefbpgzousgyvcnbikfl.supabase.co";
+  function readKey(){
+    const keys=["contactonpro_supabase_key","contactonpro_supabase"];
+    for(const k of keys){
+      try{
+        const raw=localStorage.getItem(k);
+        if(!raw) continue;
+        if(raw.startsWith("sb_publishable_")) return raw;
+        const obj=JSON.parse(raw);
+        if(obj && obj.key) return obj.key;
+      }catch(e){}
+    }
+    return "";
+  }
+  document.addEventListener("DOMContentLoaded",()=>{
+    const key=readKey();
+    const input=document.getElementById("sbKey");
+    if(input && key) input.value=key;
+    if(key) localStorage.setItem("contactonpro_supabase_key",key);
+  });
+})();
+</script>
+
+<script>
+(function(){
+  const URLV7="https://zefbpgzousgyvcnbikfl.supabase.co";
+  window.contactonGetKey=function(){
+    const input=document.getElementById("sbKey");
+    if(input && input.value.trim()) return input.value.trim();
+    try{
+      const k=localStorage.getItem("contactonpro_supabase_key");
+      if(k)return k;
+      const o=JSON.parse(localStorage.getItem("contactonpro_supabase")||"{}");
+      return o.key||"";
+    }catch(e){return "";}
+  };
+  window.contactonSaveKeyV7=function(){
+    const key=window.contactonGetKey();
+    if(!key){alert("Colle ta clé publiable sb_publishable_…");return;}
+    localStorage.setItem("contactonpro_supabase_key",key);
+    localStorage.setItem("contactonpro_supabase",JSON.stringify({url:URLV7,key}));
+    const s=document.getElementById("backendMsg");
+    if(s){s.textContent="✅ Clé publiable enregistrée sur cet appareil.";s.classList.add("ok");}
+  };
+  window.contactonSubmitAuthV7=async function(){
+    const email=(document.getElementById("authEmail")?.value||"").trim();
+    const password=document.getElementById("authPassword")?.value||"";
+    const name=(document.getElementById("authName")?.value||"").trim();
+    const role=(document.getElementById("authRole")?.value||"client");
+    const key=window.contactonGetKey();
+    if(!email||!password){alert("E-mail et mot de passe requis.");return;}
+    if(!window.supabase){alert("La bibliothèque Supabase n'est pas chargée.");return;}
+    if(!key){alert("Ajoute d'abord ta clé publiable dans la section Supabase.");return;}
+    const client=window.supabase.createClient(URLV7,key);
+    const {data,error}=await client.auth.signUp({email,password});
+    if(error){alert("Erreur Supabase : "+error.message);return;}
+    if(data.user){
+      const p=await client.from("profiles").upsert({
+        id:data.user.id, role:role, full_name:name||"Utilisateur"
+      });
+      if(p.error){alert("Compte créé, mais profil non enregistré : "+p.error.message);return;}
+    }
+    const m=document.getElementById("authModal");if(m)m.classList.remove("open");
+    alert("Compte créé ! Vérifie ton e-mail si Supabase demande une confirmation.");
+  };
+})();
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+  const btn=document.querySelector("#authFields button");
+  if(btn) btn.onclick=window.contactonSubmitAuthV7;
+  const oldSave=document.querySelector('#backend button[onclick*="saveBackend"]');
+  if(oldSave) oldSave.onclick=window.contactonSaveKeyV7;
+});
+</script>
+
+<script>
+(function(){
+  const CP_URL = "https://zefbpgzousgyvcnbikfl.supabase.co";
+  function cpKey(){
+    try{
+      const direct=localStorage.getItem("contactonpro_supabase_key");
+      if(direct) return direct.trim();
+      const obj=JSON.parse(localStorage.getItem("contactonpro_supabase")||"{}");
+      return (obj.key||"").trim();
+    }catch(e){return "";}
+  }
+  function cpClient(){
+    const k=cpKey();
+    return (window.supabase && k) ? window.supabase.createClient(CP_URL,k) : null;
+  }
+  function cpAlert(m){alert(m);}
+  async function cpProfile(sb,user){
+    const name=(document.getElementById("authName")?.value||"").trim() || user.email.split("@")[0];
+    const role=document.getElementById("authRole")?.value||"client";
+    const r=await sb.from("profiles").upsert(
+      {id:user.id,role:role,full_name:name},
+      {onConflict:"id"}
+    );
+    return r.error||null;
+  }
+  window.contactonSignupV8=async function(){
+    const email=(document.getElementById("authEmail")?.value||"").trim();
+    const password=document.getElementById("authPassword")?.value||"";
+    const sb=cpClient();
+    if(!sb){cpAlert("Clé Supabase introuvable. Enregistre ta clé publiable dans CONTACTONPRO.");return;}
+    if(!email||!password){cpAlert("E-mail et mot de passe requis.");return;}
+    const r=await sb.auth.signUp({
+      email:email,password:password,
+      options:{emailRedirectTo:window.location.origin+window.location.pathname}
+    });
+    if(r.error){cpAlert("Création refusée : "+r.error.message);return;}
+    if(r.data.user && r.data.session){
+      const pe=await cpProfile(sb,r.data.user);
+      if(pe){cpAlert("Compte créé, mais profil non enregistré : "+pe.message);return;}
+      document.getElementById("authModal")?.classList.remove("open");
+      cpAlert("✅ Compte créé et profil enregistré.");
+    }else{
+      cpAlert("✅ Compte créé. Vérifie ton e-mail puis reconnecte-toi.");
+    }
+  };
+  window.contactonLoginV8=async function(){
+    const email=(document.getElementById("authEmail")?.value||"").trim();
+    const password=document.getElementById("authPassword")?.value||"";
+    const sb=cpClient();
+    if(!sb){cpAlert("Clé Supabase introuvable. Enregistre ta clé publiable dans CONTACTONPRO.");return;}
+    if(!email||!password){cpAlert("E-mail et mot de passe requis.");return;}
+    const r=await sb.auth.signInWithPassword({email,password});
+    if(r.error){cpAlert("Connexion refusée : "+r.error.message);return;}
+    const pe=await cpProfile(sb,r.data.user);
+    if(pe){cpAlert("Connexion réussie, mais profil non enregistré : "+pe.message);return;}
+    document.getElementById("authModal")?.classList.remove("open");
+    cpAlert("✅ Connexion réussie et profil enregistré.");
+  };
+  document.addEventListener("DOMContentLoaded",function(){
+    const btn=document.querySelector("#authFields button");
+    const signup=document.getElementById("tabSignup");
+    const login=document.getElementById("tabLogin");
+    function mode(type){
+      const name=document.getElementById("authName");
+      const role=document.getElementById("authRole");
+      const title=document.getElementById("authTitle");
+      if(name)name.style.display=type==="signup"?"":"none";
+      if(role)role.style.display=type==="signup"?"":"none";
+      if(title)title.textContent=type==="signup"?"Créer un compte":"Se connecter";
+      if(btn)btn.onclick=type==="signup"?window.contactonSignupV8:window.contactonLoginV8;
+      signup?.classList.toggle("active",type==="signup");
+      login?.classList.toggle("active",type==="login");
+    }
+    window.openAuth=function(){
+      document.getElementById("authModal")?.classList.add("open");
+      mode("signup");
+    };
+    window.setAuthMode=mode;
+    if(btn)btn.onclick=window.contactonSignupV8;
+    signup?.addEventListener("click",()=>mode("signup"));
+    login?.addEventListener("click",()=>mode("login"));
+    const key=cpKey();
+    const keyInput=document.getElementById("sbKey");
+    if(keyInput&&key)keyInput.value=key;
+  });
+})();
+</script>
+
+
+<style>
+/* V11: clean auth modal behavior */
+#authModal[aria-hidden="true"]{display:none!important}
+#authModal .modal-close{cursor:pointer}
+</style>
+<script>
+(function(){
+  const SB_URL="https://zefbpgzousgyvcnbikfl.supabase.co";
+
+  function key(){
+    try{
+      const direct=localStorage.getItem("contactonpro_supabase_key");
+      if(direct) return direct.trim();
+      const o=JSON.parse(localStorage.getItem("contactonpro_supabase")||"{}");
+      return (o.key||"").trim();
+    }catch(e){return "";}
+  }
+
+  function client(){
+    const k=key();
+    return (window.supabase && k) ? window.supabase.createClient(SB_URL,k) : null;
+  }
+
+  function closeAuth(){
+    const m=document.getElementById("authModal");
+    if(!m)return;
+    m.classList.remove("open");
+    m.style.display="none";
+    m.setAttribute("aria-hidden","true");
+  }
+
+  function openAuth(){
+    const m=document.getElementById("authModal");
+    if(!m)return;
+    m.style.display="flex";
+    m.classList.add("open");
+    m.setAttribute("aria-hidden","false");
+    setMode("signup");
+  }
+
+  function setSession(email){
+    const pill=document.getElementById("sessionPill");
+    if(pill) pill.textContent="🟢 "+(email||"Connecté");
+    try{
+      localStorage.setItem("contactonpro_logged_in","1");
+      localStorage.setItem("contactonpro_logged_email",email||"");
+    }catch(e){}
+  }
+
+  function toast(msg){
+    const t=document.getElementById("toast");
+    if(t){
+      t.textContent=msg;
+      t.classList.add("show");
+      clearTimeout(window.__cpv11toast);
+      window.__cpv11toast=setTimeout(()=>t.classList.remove("show"),3000);
+    }
+  }
+
+  function setMode(mode){
+    const signup=mode==="signup";
+    const name=document.getElementById("authName");
+    const role=document.getElementById("authRole");
+    const title=document.getElementById("authTitle");
+    const btn=document.querySelector("#authFields button");
+    document.getElementById("tabSignup")?.classList.toggle("active",signup);
+    document.getElementById("tabLogin")?.classList.toggle("active",!signup);
+    if(title) title.textContent=signup?"Créer un compte":"Se connecter";
+    if(name) name.style.display=signup?"":"none";
+    if(role) role.style.display=signup?"":"none";
+    if(btn){
+      btn.textContent=signup?"Créer mon compte":"Se connecter";
+      btn.onclick=signup?signupAccount:loginAccount;
+    }
+  }
+
+  async function signupAccount(){
+    const email=(document.getElementById("authEmail")?.value||"").trim();
+    const password=document.getElementById("authPassword")?.value||"";
+    const name=(document.getElementById("authName")?.value||"").trim()||"Utilisateur";
+    const role=document.getElementById("authRole")?.value||"client";
+    const sb=client();
+    if(!sb){toast("Clé Supabase introuvable.");return;}
+    if(!email||!password){toast("E-mail et mot de passe requis.");return;}
+
+    const btn=document.querySelector("#authFields button");
+    if(btn)btn.disabled=true;
+    try{
+      const r=await sb.auth.signUp({
+        email,password,
+        options:{emailRedirectTo:window.location.origin+window.location.pathname}
+      });
+      if(r.error)throw r.error;
+
+      if(r.data.user && r.data.session){
+        const p=await sb.from("profiles").upsert(
+          {id:r.data.user.id,role,full_name:name},
+          {onConflict:"id"}
+        );
+        if(p.error)throw p.error;
+        setSession(email);
+        closeAuth();
+        toast("✅ Compte créé et profil enregistré.");
+      }else{
+        closeAuth();
+        toast("✅ Compte créé. Vérifie ton e-mail puis reconnecte-toi.");
+      }
+    }catch(e){
+      toast("❌ "+e.message);
+    }finally{
+      if(btn)btn.disabled=false;
+    }
+  }
+
+  async function loginAccount(){
+    const email=(document.getElementById("authEmail")?.value||"").trim();
+    const password=document.getElementById("authPassword")?.value||"";
+    const sb=client();
+    if(!sb){toast("Clé Supabase introuvable.");return;}
+    if(!email||!password){toast("E-mail et mot de passe requis.");return;}
+
+    const btn=document.querySelector("#authFields button");
+    if(btn)btn.disabled=true;
+    try{
+      const r=await sb.auth.signInWithPassword({email,password});
+      if(r.error)throw r.error;
+
+      setSession(r.data.user?.email||email);
+      closeAuth();
+      toast("✅ Connexion réussie.");
+    }catch(e){
+      toast("❌ Connexion impossible : "+e.message);
+    }finally{
+      if(btn)btn.disabled=false;
+    }
+  }
+
+  window.contactonOpenAuth=openAuth;
+  window.openAuth=openAuth;
+  window.setAuthMode=setMode;
+  window.contactonSetAuthMode=setMode;
+  window.contactonLoginV8=loginAccount;
+  window.contactonSignupV8=signupAccount;
+
+  document.addEventListener("DOMContentLoaded",async function(){
+    const m=document.getElementById("authModal");
+    if(m){
+      m.setAttribute("aria-hidden","true");
+      m.style.display="none";
+      m.addEventListener("click",e=>{if(e.target===m)closeAuth();});
+      m.querySelector(".modal-close")?.addEventListener("click",closeAuth);
+    }
+
+    document.getElementById("tabSignup")?.addEventListener("click",()=>setMode("signup"));
+    document.getElementById("tabLogin")?.addEventListener("click",()=>setMode("login"));
+
+    const sb=client();
+    if(sb){
+      const r=await sb.auth.getSession();
+      if(r.data?.session?.user){
+        setSession(r.data.session.user.email||"Connecté");
+      }
+      sb.auth.onAuthStateChange((_event,session)=>{
+        if(session?.user)setSession(session.user.email||"Connecté");
+      });
+    }
+  });
+})();
+</script>
+
+
+<style>
+.account-modal{max-width:560px}
+.account-head{display:flex;align-items:center;gap:14px;padding-right:35px}
+.account-avatar{width:58px;height:58px;border-radius:16px;background:#eaf1ff;color:#1769f3;display:grid;place-items:center;font-size:25px;font-weight:900}
+.account-head h2{margin:0;font-size:24px}
+.account-head small{color:var(--muted)}
+.account-status{margin-top:6px;color:#16824a;font-size:11px;font-weight:800}
+.account-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.account-item{background:#f7f9fb;border:1px solid var(--line);border-radius:12px;padding:15px;text-align:left}
+.account-item strong{display:block;font-size:13px}
+.account-item small{display:block;color:var(--muted);margin-top:5px;font-size:11px}
+.account-item:hover{background:#eaf1ff;border-color:#cfe0ff}
+.account-danger{width:100%;margin-top:16px;background:#fff1f1;color:#b42318;border:1px solid #ffd5d2;border-radius:10px;padding:12px;font-weight:800}
+.account-projects{margin-top:20px}
+.account-project{border:1px solid var(--line);border-radius:11px;padding:13px;margin-top:9px;display:flex;justify-content:space-between;gap:10px}
+@media(max-width:600px){.account-grid{grid-template-columns:1fr}}
+</style>
+<script>
+(function(){
+  const SB_URL="https://zefbpgzousgyvcnbikfl.supabase.co";
+
+  function getKey(){
+    try{
+      const a=localStorage.getItem("contactonpro_supabase_key");
+      if(a)return a.trim();
+      const o=JSON.parse(localStorage.getItem("contactonpro_supabase")||"{}");
+      return (o.key||"").trim();
+    }catch(e){return "";}
+  }
+  function sb(){
+    const k=getKey();
+    return window.supabase&&k?window.supabase.createClient(SB_URL,k):null;
+  }
+  function closeAuth(){
+    const m=document.getElementById("authModal");
+    if(m){m.classList.remove("open");m.style.display="none";}
+  }
+  function closeAccount(){
+    document.getElementById("accountModalV12")?.remove();
+  }
+
+  async function openAccount(){
+    const client=sb();
+    let user=null;
+    if(client){
+      const r=await client.auth.getSession();
+      user=r.data?.session?.user||null;
+    }
+    if(!user){
+      try{
+        if(localStorage.getItem("contactonpro_logged_in")==="1"){
+          const email=localStorage.getItem("contactonpro_logged_email")||"";
+          user={email};
+        }
+      }catch(e){}
+    }
+    if(!user){
+      window.contactonOpenAuth?.();
+      return;
+    }
+
+    closeAccount();
+    const email=user.email||"";
+    const initial=(email.charAt(0)||"U").toUpperCase();
+    const projects=(window.state&&Array.isArray(window.state.projects))?window.state.projects:[];
+    const projectHtml=projects.length
+      ? projects.slice(0,4).map(p=>`<div class="account-project"><div><strong>${escapeHtmlV12(p.type||"Projet")}</strong><small>${escapeHtmlV12(p.city||"Localisation non précisée")} · ${escapeHtmlV12(p.status||"En cours")}</small></div><span class="badge">${escapeHtmlV12(p.status||"En cours")}</span></div>`).join("")
+      : `<div class="empty">Aucun projet pour le moment.<br><button class="primary" style="margin-top:10px" onclick="closeAccountV12();openWizard()">Décrire mon projet</button></div>`;
+
+    const m=document.createElement("div");
+    m.id="accountModalV12";
+    m.className="modal open";
+    m.innerHTML=`
+      <div class="modal-box account-modal">
+        <button class="close" type="button" aria-label="Fermer">×</button>
+        <div class="account-head">
+          <div class="account-avatar">${initial}</div>
+          <div>
+            <h2>Mon compte</h2>
+            <small>${escapeHtmlV12(email)}</small>
+            <div class="account-status">● Connecté</div>
+          </div>
+        </div>
+
+        <div class="account-grid">
+          <button class="account-item" onclick="accountActionV12('projects')"><strong>🏗️ Mes projets</strong><small>Suivre l’avancement de mes chantiers</small></button>
+          <button class="account-item" onclick="accountActionV12('requests')"><strong>📋 Mes demandes</strong><small>Voir les professionnels contactés</small></button>
+          <button class="account-item" onclick="accountActionV12('quotes')"><strong>💶 Mes devis</strong><small>Comparer les propositions reçues</small></button>
+          <button class="account-item" onclick="accountActionV12('messages')"><strong>💬 Messages</strong><small>Échanger avec les professionnels</small></button>
+          <button class="account-item" onclick="accountActionV12('profile')"><strong>👤 Mon profil</strong><small>Gérer mes informations</small></button>
+          <button class="account-item" onclick="openWizard();closeAccountV12()"><strong>➕ Nouveau projet</strong><small>Décrire un nouveau chantier</small></button>
+        </div>
+
+        <div class="account-projects">
+          <span class="eyebrow">MES PROJETS</span>
+          ${projectHtml}
+        </div>
+
+        <button class="account-danger" onclick="logoutV12()">Déconnexion</button>
+      </div>`;
+    document.body.appendChild(m);
+    m.querySelector(".close").onclick=closeAccount;
+    m.addEventListener("click",e=>{if(e.target===m)closeAccount();});
+  }
+
+  function escapeHtmlV12(v){
+    return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  }
+
+  window.closeAccountV12=closeAccount;
+  window.openAccountV12=openAccount;
+
+  window.accountActionV12=function(tab){
+    closeAccount();
+    const el=document.getElementById("espace");
+    if(el)el.scrollIntoView({behavior:"smooth"});
+    setTimeout(()=>window.switchDashboard?.(tab==="projects"?"client":tab),250);
+  };
+
+  window.logoutV12=async function(){
+    const client=sb();
+    if(client) await client.auth.signOut();
+    try{
+      localStorage.removeItem("contactonpro_logged_in");
+      localStorage.removeItem("contactonpro_logged_email");
+    }catch(e){}
+    const pill=document.getElementById("sessionPill");
+    if(pill)pill.textContent="Visiteur";
+    closeAccount();
+    toastV6?.("Vous êtes déconnecté.");
+  };
+
+  document.addEventListener("DOMContentLoaded",function(){
+    const buttons=document.querySelectorAll('.authbar button');
+    buttons.forEach(b=>{
+      b.onclick=function(e){e.preventDefault();openAccount();};
+    });
+  });
+})();
+</script>
+
+
+<style>
+.cp13-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:99999;display:flex;align-items:center;justify-content:center;padding:18px}.cp13-card{width:min(720px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:18px;padding:22px;position:relative}.cp13-close{position:absolute;right:14px;top:10px;border:0;background:transparent;font-size:28px}.cp13-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.cp13-full{grid-column:1/-1}.cp13-card label{display:block;font-weight:700;font-size:13px;margin-bottom:6px}.cp13-card input,.cp13-card select,.cp13-card textarea{width:100%;box-sizing:border-box;border:1px solid #d9dee5;border-radius:10px;padding:11px;font:inherit}.cp13-card textarea{min-height:110px}.cp13-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:18px}.cp13-primary{border:0;border-radius:10px;padding:12px 18px;font-weight:800;background:#1769f3;color:#fff}.cp13-secondary{border:1px solid #d9dee5;background:#fff;border-radius:10px;padding:12px 18px;font-weight:700}@media(max-width:620px){.cp13-grid{grid-template-columns:1fr}.cp13-full{grid-column:auto}}
+</style>
+<script>
+(function(){
+const URL="https://zefbpgzousgyvcnbikfl.supabase.co";
+function key(){try{return(localStorage.getItem("contactonpro_supabase_key")||JSON.parse(localStorage.getItem("contactonpro_supabase")||"{}").key||"").trim()}catch(e){return""}}
+function db(){const k=key();return window.supabase&&k?window.supabase.createClient(URL,k):null}
+async function user(){const s=db();if(!s)return null;const r=await s.auth.getSession();return r.data?.session?.user||null}
+function close(){document.getElementById("cp13ProjectModal")?.remove()}
+window.openProjectV13=async function(){
+if(!await user()){alert("Connecte-toi avant de créer un projet.");window.contactonOpenAuth?.();return}
+close();const m=document.createElement("div");m.id="cp13ProjectModal";m.className="cp13-overlay";
+m.innerHTML=`<div class="cp13-card"><button class="cp13-close">×</button><h2>Décrire mon projet</h2><p>Décris ton chantier pour recevoir des propositions de professionnels.</p><div class="cp13-grid"><div><label>Type de travaux *</label><select id="cp13Type"><option value="">Choisir...</option><option>Terrassement</option><option>Maçonnerie</option><option>Voirie / réseaux</option><option>Aménagement extérieur</option><option>Jardinage / espaces verts</option><option>Rénovation</option><option>Construction</option><option>Autre</option></select></div><div><label>Commune *</label><input id="cp13City" placeholder="Ex. Grand-Couronne"></div><div class="cp13-full"><label>Description *</label><textarea id="cp13Description" placeholder="Décris ton chantier, dimensions, accès, contraintes..."></textarea></div><div><label>Budget estimatif (€)</label><input id="cp13Budget" type="number" min="0"></div><div><label>Date souhaitée</label><input id="cp13Date" type="date"></div><div class="cp13-full"><label>Photos / documents</label><input id="cp13Files" type="file" multiple accept="image/*,.pdf"><small>L'envoi des fichiers sera activé à l'étape suivante.</small></div></div><div class="cp13-actions"><button class="cp13-secondary" id="cp13Cancel">Annuler</button><button class="cp13-primary" id="cp13Publish">Publier mon projet</button></div></div>`;
+document.body.appendChild(m);m.querySelector(".cp13-close").onclick=close;m.querySelector("#cp13Cancel").onclick=close;m.onclick=e=>{if(e.target===m)close()};
+m.querySelector("#cp13Publish").onclick=async()=>{const s=db(),u=await user(),type=document.getElementById("cp13Type").value,city=document.getElementById("cp13City").value.trim(),description=document.getElementById("cp13Description").value.trim(),budget=document.getElementById("cp13Budget").value,date=document.getElementById("cp13Date").value||null;if(!type||!city||!description){alert("Remplis les champs obligatoires.");return}const r=await s.from("projects").insert({user_id:u.id,title:type+" — "+city,type,description,city,budget:budget?Number(budget):null,desired_date:date,status:"Publié"}).select().single();if(r.error){alert("Formulaire OK. La table projects doit maintenant être configurée dans Supabase : "+r.error.message);return}close();alert("✅ Projet publié et enregistré.");window.openAccountV12?.()}
+};
+window.openWizard=window.openProjectV13;
+document.addEventListener("DOMContentLoaded",()=>document.querySelectorAll('[onclick*="openWizard"],[onclick*="Décrire mon projet"],[onclick*="Nouveau projet"]').forEach(b=>b.onclick=e=>{e.preventDefault();openProjectV13()}));
+})();
+</script>
+
+
+
+
+
+
+
+<style>
+/* CONTACTONPRO V19 — architecture Client / Pro nettoyée */
+.cp19-modal{position:fixed;inset:0;background:rgba(15,23,42,.62);display:none;align-items:center;justify-content:center;padding:18px;z-index:100000}
+.cp19-modal.open{display:flex}
+.cp19-box{width:min(900px,96vw);max-height:90vh;overflow:auto;background:#fff;border-radius:18px;padding:18px;box-shadow:0 24px 80px rgba(0,0,0,.28)}
+.cp19-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
+.cp19-close,.cp19-tab{border:1px solid #d9dee5;background:#fff;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer}
+.cp19-tab.active{background:#111827;color:#fff}
+.cp19-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 16px}
+.cp19-card{border:1px solid #e1e6eb;border-radius:14px;padding:14px;background:#fff;margin:10px 0}
+.cp19-meta{display:flex;flex-wrap:wrap;gap:7px;margin:9px 0}
+.cp19-chip{background:#f2f5f8;border-radius:999px;padding:5px 8px;font-size:11px}
+.cp19-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.cp19-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:14px 0}
+.cp19-stat{border:1px solid #e1e6eb;border-radius:13px;padding:14px;background:#fff}
+.cp19-stat small{display:block;color:#667085}.cp19-stat strong{display:block;font-size:22px;margin-top:5px}
+.cp19-form{display:grid;gap:11px}.cp19-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cp19-form input,.cp19-form textarea{width:100%;border:1px solid #d9dee5;border-radius:10px;padding:11px}
+.cp19-form label{font-size:12px;font-weight:800}
+.cp19-empty,.cp19-error{padding:22px;border:1px dashed #d9dee5;border-radius:12px;text-align:center;color:#667085}
+.cp19-error{background:#fff7f7;border-color:#efc3c3;color:#9a2d2d}
+@media(max-width:700px){.cp19-grid,.cp19-stats,.cp19-row{grid-template-columns:1fr}}
+</style>
+
+<div id="cp19Modal" class="cp19-modal">
+  <div class="cp19-box">
+    <div class="cp19-head">
+      <div><small id="cp19Eyebrow">CONTACTONPRO</small><h2 id="cp19Title">Mon espace</h2></div>
+      <button class="cp19-close" id="cp19Close">Fermer</button>
+    </div>
+    <div id="cp19Tabs" class="cp19-tabs"></div>
+    <div id="cp19Content"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+if(window.__cp19)return; window.__cp19=true;
+const URL="https://zefbpgzousgyvcnbikfl.supabase.co";
+let busy=false;
+
+function key(){try{const d=(localStorage.getItem("contactonpro_supabase_key")||"").trim();if(d)return d;return(JSON.parse(localStorage.getItem("contactonpro_supabase")||"{}").key||"").trim()}catch(e){return""}}
+function db(){const k=key();return window.supabase&&k?window.supabase.createClient(URL,k):null}
+async function user(){const c=db();if(!c)return null;const r=await c.auth.getSession();return r.data?.session?.user||null}
+function h(s){return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]))}
+function money(v){if(v===null||v===undefined||v==="")return"Non précisé";const n=Number(v);return Number.isFinite(n)?n.toLocaleString("fr-FR")+" €":String(v)}
+function dateFR(v){if(!v)return"Non précisée";try{return new Date(v+"T00:00:00").toLocaleDateString("fr-FR")}catch(e){return v}}
+
+async function role(){
+ const c=db(),u=await user(); if(!c||!u)return null;
+ const r=await c.from("profiles").select("role").eq("id",u.id).maybeSingle();
+ if(r.data?.role)return r.data.role;
+ const p=await c.from("professional_profiles").select("user_id").eq("user_id",u.id).maybeSingle();
+ if(p.data){await c.from("profiles").update({role:"pro"}).eq("id",u.id);return"pro"}
+ return"client";
+}
+async function setRole(r){const c=db(),u=await user();if(c&&u)await c.from("profiles").update({role:r}).eq("id",u.id)}
+
+function openModal(){document.getElementById("cp19Modal").classList.add("open")}
+function closeModal(){document.getElementById("cp19Modal").classList.remove("open")}
+document.getElementById("cp19Close").onclick=closeModal;
+document.getElementById("cp19Modal").onclick=e=>{if(e.target.id==="cp19Modal")closeModal()};
+
+function tabs(items,active){
+ const t=document.getElementById("cp19Tabs");
+ t.innerHTML=items.map(x=>`<button class="cp19-tab ${x[0]===active?"active":""}" data-tab="${x[0]}">${x[1]}</button>`).join("");
+ t.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>routeModal(b.dataset.tab));
+}
+
+async function clientProjects(){
+ const c=db(),u=await user();
+ return await c.from("projects").select("*").eq("user_id",u.id).order("created_at",{ascending:false});
+}
+
+async function showClient(tab="projects"){
+ openModal(); document.getElementById("cp19Eyebrow").textContent="ESPACE CLIENT"; document.getElementById("cp19Title").textContent="Mon compte";
+ tabs([["projects","Mes projets"],["requests","Mes demandes"],["quotes","Mes devis"],["messages","Messages"],["profile","Mon profil"]],tab);
+ const root=document.getElementById("cp19Content"),c=db(),u=await user();
+ root.innerHTML='<div class="cp19-empty">Chargement…</div>';
+ if(tab==="projects"){
+   const r=await clientProjects();
+   root.innerHTML=r.error?`<div class="cp19-error">${h(r.error.message)}</div>`:
+   r.data.length?r.data.map(p=>`<div class="cp19-card"><strong>${h(p.title||p.type||"Projet")}</strong><div class="cp19-meta">${p.city?`<span class="cp19-chip">📍 ${h(p.city)}</span>`:""}<span class="cp19-chip">💶 ${h(money(p.budget))}</span><span class="cp19-chip">📅 ${h(dateFR(p.desired_date))}</span><span class="cp19-chip">${h(p.status||"Publié")}</span></div><div>${h(p.description||"")}</div></div>`).join(""):'<div class="cp19-empty">Aucun projet pour le moment.</div>';
+ }
+ if(tab==="requests"){
+   const r=await c.from("client_requests").select("*").eq("client_id",u.id).order("created_at",{ascending:false});
+   root.innerHTML=r.error?`<div class="cp19-error">${h(r.error.message)}</div>`:r.data.length?r.data.map(x=>`<div class="cp19-card"><strong>${h(x.professional_name||"Professionnel")}</strong><div class="cp19-meta"><span class="cp19-chip">${h(x.status||"Envoyée")}</span></div><div>${h(x.message||"")}</div></div>`).join(""):'<div class="cp19-empty">Aucune demande.</div>';
+ }
+ if(tab==="quotes"){
+   const r=await c.from("quotes").select("*").eq("client_id",u.id).order("created_at",{ascending:false});
+   root.innerHTML=r.error?`<div class="cp19-error">${h(r.error.message)}</div>`:r.data.length?r.data.map(x=>`<div class="cp19-card"><strong>${h(x.professional_name||"Professionnel")}</strong><div class="cp19-meta"><span class="cp19-chip">${h(money(x.amount))}</span><span class="cp19-chip">${h(x.status||"Reçu")}</span></div><div>${h(x.message||"")}</div></div>`).join(""):'<div class="cp19-empty">Aucun devis reçu.</div>';
+ }
+ if(tab==="messages"){
+   const r=await c.from("messages").select("*").eq("user_id",u.id).order("created_at",{ascending:true});
+   root.innerHTML=r.error?`<div class="cp19-error">${h(r.error.message)}</div>`:r.data.length?r.data.map(m=>`<div class="cp19-card"><strong>${h(m.contact_name||"CONTACTONPRO")}</strong><div>${h(m.content||"")}</div></div>`).join(""):'<div class="cp19-empty">Aucun message.</div>';
+ }
+ if(tab==="profile"){
+   const r=await c.from("profiles").select("*").eq("id",u.id).maybeSingle(),p=r.data||{};
+   root.innerHTML=`<div class="cp19-form"><div><label>E-mail</label><input value="${h(u.email||"")}" disabled></div><div class="cp19-row"><div><label>Nom</label><input id="cp19Name" value="${h(p.full_name||"")}"></div><div><label>Téléphone</label><input id="cp19Phone" value="${h(p.phone||"")}"></div></div><div><label>Commune</label><input id="cp19City" value="${h(p.city||"")}"></div><button class="primary" id="cp19SaveProfile">Enregistrer</button></div>`;
+   document.getElementById("cp19SaveProfile").onclick=async()=>{const x=await c.from("profiles").update({full_name:document.getElementById("cp19Name").value.trim(),phone:document.getElementById("cp19Phone").value.trim(),city:document.getElementById("cp19City").value.trim()}).eq("id",u.id);alert(x.error?"Erreur : "+x.error.message:"✅ Profil enregistré.")};
+ }
+}
+
+async function proProfile(){
+ const c=db(),u=await user(); return await c.from("professional_profiles").select("*").eq("user_id",u.id).maybeSingle();
+}
+async function showPro(tab="dashboard"){
+ openModal();document.getElementById("cp19Eyebrow").textContent="ESPACE PROFESSIONNEL";document.getElementById("cp19Title").textContent="CONTACTONPRO Pro";
+ tabs([["dashboard","Tableau de bord"],["profile","Mon entreprise"],["jobs","Chantiers"],["responses","Mes réponses"],["messages","Messages"]],tab);
+ const root=document.getElementById("cp19Content"),c=db(),u=await user();root.innerHTML='<div class="cp19-empty">Chargement…</div>';
+ const pp=await proProfile(),p=pp.data||{};
+ if(tab==="dashboard"){
+   const q=await c.from("quotes").select("status").eq("professional_id",u.id);
+   const jobs=await c.from("projects").select("id,user_id,status").eq("status","Publié");
+   const available=(jobs.data||[]).filter(x=>x.user_id!==u.id).length;
+   const sent=(q.data||[]).length,accepted=(q.data||[]).filter(x=>String(x.status||"").toLowerCase().includes("accept")).length;
+   root.innerHTML=`<h2>${h(p.company_name||"Mon entreprise")}</h2><div class="cp19-stats"><div class="cp19-stat"><small>Chantiers disponibles</small><strong>${available}</strong></div><div class="cp19-stat"><small>Devis envoyés</small><strong>${sent}</strong></div><div class="cp19-stat"><small>Devis acceptés</small><strong>${accepted}</strong></div></div>`;
+ }
+ if(tab==="profile"){
+   root.innerHTML=`<div class="cp19-form"><div class="cp19-row"><div><label>Entreprise</label><input id="cp19Company" value="${h(p.company_name||"")}"></div><div><label>SIRET</label><input id="cp19Siret" value="${h(p.siret||"")}"></div></div><div class="cp19-row"><div><label>Métier</label><input id="cp19Trade" value="${h(p.trade||"")}"></div><div><label>Zone</label><input id="cp19Area" value="${h(p.service_area||"")}"></div></div><div><label>Description</label><textarea id="cp19Bio">${h(p.description||"")}</textarea></div><button class="primary" id="cp19SavePro">Enregistrer mon entreprise</button></div>`;
+   document.getElementById("cp19SavePro").onclick=async()=>{const x=await c.from("professional_profiles").upsert({user_id:u.id,company_name:document.getElementById("cp19Company").value.trim(),siret:document.getElementById("cp19Siret").value.trim(),trade:document.getElementById("cp19Trade").value.trim(),service_area:document.getElementById("cp19Area").value.trim(),description:document.getElementById("cp19Bio").value.trim()},{onConflict:"user_id"});if(!x.error)await setRole("pro");alert(x.error?"Erreur : "+x.error.message:"✅ Profil professionnel enregistré.")};
+ }
+ if(tab==="jobs"){
+   const r=await c.from("projects").select("*").eq("status","Publié").order("created_at",{ascending:false});
+   const rows=(r.data||[]).filter(x=>x.user_id!==u.id);
+   root.innerHTML=r.error?`<div class="cp19-error">${h(r.error.message)}</div>`:rows.length?'<div class="cp19-grid">'+rows.map(x=>`<div class="cp19-card"><strong>${h(x.title||x.type||"Projet")}</strong><div class="cp19-meta">${x.city?`<span class="cp19-chip">📍 ${h(x.city)}</span>`:""}<span class="cp19-chip">💶 ${h(money(x.budget))}</span></div><div>${h(x.description||"")}</div><button class="primary cp19Respond" data-id="${h(x.id)}" style="margin-top:10px">Envoyer un devis</button></div>`).join("")+'</div>':'<div class="cp19-empty">Aucun chantier disponible.</div>';
+   root.querySelectorAll(".cp19Respond").forEach(b=>b.onclick=()=>quoteForm(b.dataset.id));
+ }
+ if(tab==="responses"){
+   const r=await c.from("quotes").select("*").eq("professional_id",u.id).order("created_at",{ascending:false});
+   root.innerHTML=r.error?`<div class="cp19-error">${h(r.error.message)}</div>`:r.data.length?r.data.map(x=>`<div class="cp19-card"><strong>${h(money(x.amount))}</strong><div class="cp19-meta"><span class="cp19-chip">${h(x.status||"Reçu")}</span></div><div>${h(x.message||"")}</div></div>`).join(""):'<div class="cp19-empty">Aucune réponse envoyée.</div>';
+ }
+ if(tab==="messages"){
+   const r=await c.from("messages").select("*").eq("professional_id",u.id).order("created_at",{ascending:true});
+   root.innerHTML=r.error?`<div class="cp19-error">${h(r.error.message)}</div>`:r.data.length?r.data.map(m=>`<div class="cp19-card"><strong>${h(m.contact_name||"Client")}</strong><div>${h(m.content||"")}</div></div>`).join(""):'<div class="cp19-empty">Aucun message.</div>';
+ }
+}
+
+async function quoteForm(id){
+ const root=document.getElementById("cp19Content"),c=db(),u=await user(),pp=await proProfile(),p=pp.data||{};
+ root.innerHTML=`<div class="cp19-form"><h3>Envoyer un devis</h3><div><label>Montant (€)</label><input id="cp19Amount" type="number"></div><div><label>Message</label><textarea id="cp19QuoteMsg"></textarea></div><button class="primary" id="cp19SendQuote">Envoyer</button></div>`;
+ document.getElementById("cp19SendQuote").onclick=async()=>{const pr=await c.from("projects").select("id,user_id").eq("id",id).single();if(pr.error)return alert("Projet introuvable");const payload={project_id:String(id),client_id:pr.data.user_id,professional_id:u.id,professional_name:p.company_name||p.trade||"Professionnel",amount:Number(document.getElementById("cp19Amount").value||0),message:document.getElementById("cp19QuoteMsg").value.trim(),status:"Reçu"};const q=await c.from("quotes").insert(payload);if(q.error)return alert("Erreur : "+q.error.message);await c.from("client_requests").insert({client_id:pr.data.user_id,project_id:String(id),professional_id:u.id,professional_name:payload.professional_name,message:"Un professionnel a répondu à votre projet.",status:"Réponse reçue"});alert("✅ Devis envoyé.");showPro("responses")};
+}
+
+async function routeModal(tab){
+ const r=await role(); if(r==="pro")showPro(tab||"dashboard"); else showClient(tab||"projects");
+}
+window.openAccountV12=()=>routeModal();
+window.openProV17=(tab="dashboard")=>showPro(tab);
+window.switchDashboard=async(tab)=>{const r=await role();if(r==="pro")return showPro(tab==="profile"?"profile":"dashboard");return showClient(tab==="client"?"projects":tab)};
+
+document.addEventListener("click",async function(e){
+ const el=e.target.closest("a,button");if(!el)return;
+ const txt=(el.textContent||"").trim().toLowerCase();
+ if(txt==="compte"){e.preventDefault();e.stopPropagation();if(e.stopImmediatePropagation)e.stopImmediatePropagation();routeModal()}
+ if(txt==="espace pro"){e.preventDefault();e.stopPropagation();if(e.stopImmediatePropagation)e.stopImmediatePropagation();const u=await user();if(!u){window.contactonOpenAuth?.();return}await setRole("pro");showPro("profile")}
+},true);
+
+const c=db();
+if(c)c.auth.onAuthStateChange((event,session)=>{if(session?.user&&(event==="SIGNED_IN"||event==="INITIAL_SESSION"))setTimeout(()=>{},100)});
+})();
+</script>
+
+
+<style>
+/* CONTACTONPRO V19.1 */
+.cp191-loading,.cp191-empty,.cp191-error{
+  padding:22px;border:1px dashed var(--line);border-radius:12px;text-align:center;color:var(--muted)
+}
+.cp191-error{background:#fff7f7;border-color:#efc3c3;color:#9a2d2d}
+.cp191-project{border:1px solid var(--line);border-radius:13px;padding:14px;margin:10px 0;background:#fff}
+.cp191-meta{display:flex;flex-wrap:wrap;gap:7px;margin:9px 0}
+.cp191-chip{background:#f2f5f8;border-radius:999px;padding:5px 8px;font-size:11px}
+.cp191-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:16px 0}
+.cp191-stat{border:1px solid var(--line);border-radius:13px;padding:14px;background:#fff}
+.cp191-stat small{display:block;color:var(--muted)} .cp191-stat strong{display:block;font-size:24px;margin-top:5px}
+.cp191-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+@media(max-width:700px){.cp191-stats{grid-template-columns:1fr}}
+</style>
+
+<script>
+(function(){
+if(window.__cp191)return; window.__cp191=true;
+
+const URL="https://zefbpgzousgyvcnbikfl.supabase.co";
+const TIMEOUT=7000;
+
+function key(){
+  try{
+    const d=(localStorage.getItem("contactonpro_supabase_key")||"").trim();
+    if(d)return d;
+    return (JSON.parse(localStorage.getItem("contactonpro_supabase")||"{}").key||"").trim();
+  }catch(e){return""}
+}
+function db(){
+  const k=key();
+  return (window.supabase&&k)?window.supabase.createClient(URL,k):null;
+}
+function h(s){
+  return String(s??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]));
+}
+function money(v){
+  if(v===null||v===undefined||v==="")return"Non précisé";
+  const n=Number(v); return Number.isFinite(n)?n.toLocaleString("fr-FR")+" €":String(v);
+}
+function dateFR(v){
+  if(!v)return"Non précisée";
+  try{return new Date(v+"T00:00:00").toLocaleDateString("fr-FR")}catch(e){return v}
+}
+async function withTimeout(promise,label){
+  return await Promise.race([
+    promise,
+    new Promise((_,rej)=>setTimeout(()=>rej(new Error(label+" : délai dépassé")),TIMEOUT))
+  ]);
+}
+async function currentUser(){
+  const c=db(); if(!c)return null;
+  const r=await withTimeout(c.auth.getSession(),"Connexion");
+  return r.data?.session?.user||null;
+}
+async function getRole(){
+  const c=db(),u=await currentUser();
+  if(!c||!u)return null;
+  const r=await withTimeout(c.from("profiles").select("role").eq("id",u.id).maybeSingle(),"Profil");
+  if(r.data?.role)return r.data.role;
+  return "client";
+}
+
+/* ---------- CLIENT : remplace définitivement le "Chargement..." ---------- */
+async function renderClient191(tab="projects"){
+  const root=document.getElementById("clientView");
+  if(!root)return;
+
+  root.innerHTML='<div class="cp191-loading">Chargement de votre espace…</div>';
+
+  try{
+    const c=db();
+    if(!c) throw new Error("Connexion Supabase non configurée sur cet appareil.");
+    const u=await currentUser();
+    if(!u){
+      root.innerHTML='<div class="cp191-empty">Connectez-vous pour accéder à votre espace client.</div>';
+      return;
+    }
+
+    const role=await getRole();
+    if(role==="pro"){
+      root.innerHTML='<div class="cp191-empty">Ce compte est un compte professionnel. Utilisez « Espace pro ».</div>';
+      return;
+    }
+
+    document.querySelectorAll("#projet .side button").forEach(b=>b.classList.remove("active"));
+    const map={projects:"vue d'ensemble",client:"vue d'ensemble",requests:"mes demandes",quotes:"mes devis",messages:"messages",profile:"mon profil"};
+    document.querySelectorAll("#projet .side button").forEach(b=>{
+      if((b.textContent||"").toLowerCase().includes(map[tab]||""))b.classList.add("active");
+    });
+
+    if(tab==="projects"||tab==="client"){
+      const r=await withTimeout(
+        c.from("projects").select("*").eq("user_id",u.id).order("created_at",{ascending:false}),
+        "Projets"
+      );
+      if(r.error)throw r.error;
+      const rows=r.data||[];
+      root.innerHTML=`<span class="eyebrow">MON PROJET</span><h2 style="margin:7px 0">Vue d’ensemble</h2>
+        ${rows.length?rows.map(p=>`<div class="cp191-project">
+          <div style="display:flex;justify-content:space-between;gap:10px"><strong>${h(p.title||p.type||"Projet")}</strong><span class="cp191-chip">${h(p.status||"Publié")}</span></div>
+          <div class="cp191-meta">
+            ${p.city?`<span class="cp191-chip">📍 ${h(p.city)}</span>`:""}
+            <span class="cp191-chip">💶 ${h(money(p.budget))}</span>
+            <span class="cp191-chip">📅 ${h(dateFR(p.desired_date))}</span>
+          </div>
+          <div>${h(p.description||"")}</div>
+        </div>`).join(""):'<div class="cp191-empty">Aucun projet publié pour le moment.</div>'}`;
+      return;
+    }
+
+    if(tab==="requests"){
+      const r=await withTimeout(c.from("client_requests").select("*").eq("client_id",u.id).order("created_at",{ascending:false}),"Demandes");
+      if(r.error)throw r.error;
+      root.innerHTML=`<span class="eyebrow">MES DEMANDES</span><h2 style="margin:7px 0">Professionnels intéressés</h2>
+      ${(r.data||[]).length?(r.data||[]).map(x=>`<div class="cp191-project"><strong>${h(x.professional_name||"Professionnel")}</strong><div class="cp191-meta"><span class="cp191-chip">${h(x.status||"Envoyée")}</span></div><div>${h(x.message||"")}</div></div>`).join(""):'<div class="cp191-empty">Aucune demande pour le moment.</div>'}`;
+      return;
+    }
+
+    if(tab==="quotes"){
+      const r=await withTimeout(c.from("quotes").select("*").eq("client_id",u.id).order("created_at",{ascending:false}),"Devis");
+      if(r.error)throw r.error;
+      root.innerHTML=`<span class="eyebrow">MES DEVIS</span><h2 style="margin:7px 0">Devis reçus</h2>
+      ${(r.data||[]).length?(r.data||[]).map(x=>`<div class="cp191-project"><strong>${h(x.professional_name||"Professionnel")}</strong><div class="cp191-meta"><span class="cp191-chip">💶 ${h(money(x.amount))}</span><span class="cp191-chip">${h(x.status||"Reçu")}</span></div><div>${h(x.message||"")}</div></div>`).join(""):'<div class="cp191-empty">Aucun devis reçu.</div>'}`;
+      return;
+    }
+
+    if(tab==="messages"){
+      const r=await withTimeout(c.from("messages").select("*").eq("user_id",u.id).order("created_at",{ascending:true}),"Messages");
+      if(r.error)throw r.error;
+      root.innerHTML=`<span class="eyebrow">MESSAGES</span><h2 style="margin:7px 0">Mes conversations</h2>
+      ${(r.data||[]).length?(r.data||[]).map(m=>`<div class="cp191-project"><strong>${h(m.contact_name||"CONTACTONPRO")}</strong><div>${h(m.content||"")}</div></div>`).join(""):'<div class="cp191-empty">Aucun message.</div>'}`;
+      return;
+    }
+
+    if(tab==="profile"){
+      const r=await withTimeout(c.from("profiles").select("*").eq("id",u.id).maybeSingle(),"Profil");
+      if(r.error)throw r.error;
+      const p=r.data||{};
+      root.innerHTML=`<span class="eyebrow">MON PROFIL</span><h2 style="margin:7px 0">Mes informations</h2>
+      <div style="display:grid;gap:10px;max-width:620px;margin-top:16px">
+        <input id="cp191Name" placeholder="Nom" value="${h(p.full_name||"")}" style="padding:11px;border:1px solid var(--line);border-radius:9px">
+        <input id="cp191Phone" placeholder="Téléphone" value="${h(p.phone||"")}" style="padding:11px;border:1px solid var(--line);border-radius:9px">
+        <input id="cp191City" placeholder="Commune" value="${h(p.city||"")}" style="padding:11px;border:1px solid var(--line);border-radius:9px">
+        <button class="primary" id="cp191SaveProfile">Enregistrer</button>
+      </div>`;
+      document.getElementById("cp191SaveProfile").onclick=async()=>{
+        const x=await c.from("profiles").update({
+          full_name:document.getElementById("cp191Name").value.trim(),
+          phone:document.getElementById("cp191Phone").value.trim(),
+          city:document.getElementById("cp191City").value.trim()
+        }).eq("id",u.id);
+        alert(x.error?"Erreur : "+x.error.message:"✅ Profil enregistré.");
+      };
+    }
+  }catch(err){
+    root.innerHTML='<div class="cp191-error"><b>Impossible de charger votre espace.</b><br>'+h(err.message||err)+'</div>';
+  }
+}
+window.renderClientV191=renderClient191;
+window.switchDashboard=(tab)=>renderClient191(tab==="client"?"projects":tab);
+
+/* ---------- PRO : remplace les chiffres et demandes fictives ---------- */
+async function renderPro191(tab="dashboard"){
+  const root=document.getElementById("cp191ProMain");
+  if(!root)return;
+  document.querySelectorAll("#cp191ProSide [data-protab]").forEach(b=>b.classList.toggle("active",b.dataset.protab===tab));
+  root.innerHTML='<div class="cp191-loading">Chargement de votre espace professionnel…</div>';
+
+  try{
+    const c=db();
+    if(!c)throw new Error("Connexion Supabase non configurée.");
+    const u=await currentUser();
+    if(!u){
+      root.innerHTML='<div class="cp191-empty">Connectez-vous pour utiliser l’espace professionnel.</div>';
+      return;
+    }
+
+    const pp=await withTimeout(c.from("professional_profiles").select("*").eq("user_id",u.id).maybeSingle(),"Entreprise");
+    if(pp.error)throw pp.error;
+    const p=pp.data||{};
+
+    if(tab==="dashboard"){
+      const [jobs,quotes] = await Promise.all([
+        withTimeout(c.from("projects").select("*").eq("status","Publié").order("created_at",{ascending:false}),"Chantiers"),
+        withTimeout(c.from("quotes").select("*").eq("professional_id",u.id).order("created_at",{ascending:false}),"Devis")
+      ]);
+      if(jobs.error)throw jobs.error;if(quotes.error)throw quotes.error;
+      const available=(jobs.data||[]).filter(x=>x.user_id!==u.id);
+      const sent=quotes.data||[];
+      const won=sent.filter(x=>String(x.status||"").toLowerCase().includes("accept"));
+      const potential=sent.reduce((s,x)=>s+(Number(x.amount)||0),0);
+      root.innerHTML=`<span class="eyebrow">TABLEAU DE BORD</span><h2 style="margin:7px 0">${h(p.company_name||"Votre activité")}</h2>
+        <div class="cp191-stats">
+          <div class="cp191-stat"><small>Chantiers disponibles</small><strong>${available.length}</strong></div>
+          <div class="cp191-stat"><small>Devis envoyés</small><strong>${sent.length}</strong></div>
+          <div class="cp191-stat"><small>Devis acceptés</small><strong>${won.length}</strong></div>
+        </div>
+        <div class="cp191-project"><strong>CA potentiel des devis envoyés</strong><div style="font-size:22px;margin-top:7px">${h(money(potential))}</div></div>
+        <div class="cp191-actions"><button class="primary" onclick="renderProV191('jobs')">Voir les chantiers</button><button class="ghost" style="color:#25364a;border-color:var(--line)" onclick="renderProV191('profile')">Compléter mon profil</button></div>`;
+      return;
+    }
+
+    if(tab==="jobs"){
+      const r=await withTimeout(c.from("projects").select("*").eq("status","Publié").order("created_at",{ascending:false}),"Chantiers");
+      if(r.error)throw r.error;
+      const rows=(r.data||[]).filter(x=>x.user_id!==u.id);
+      root.innerHTML=`<span class="eyebrow">CHANTIERS</span><h2 style="margin:7px 0">Chantiers disponibles</h2>
+      ${rows.length?rows.map(x=>`<div class="cp191-project"><strong>${h(x.title||x.type||"Projet")}</strong><div class="cp191-meta">${x.city?`<span class="cp191-chip">📍 ${h(x.city)}</span>`:""}<span class="cp191-chip">💶 ${h(money(x.budget))}</span><span class="cp191-chip">📅 ${h(dateFR(x.desired_date))}</span></div><div>${h(x.description||"")}</div><button class="primary" style="margin-top:10px" onclick="openProV17?.('jobs')">Répondre au projet</button></div>`).join(""):'<div class="cp191-empty">Aucun chantier disponible pour le moment.</div>'}`;
+      return;
+    }
+
+    if(tab==="responses"){
+      const r=await withTimeout(c.from("quotes").select("*").eq("professional_id",u.id).order("created_at",{ascending:false}),"Devis");
+      if(r.error)throw r.error;
+      root.innerHTML=`<span class="eyebrow">MES DEVIS</span><h2 style="margin:7px 0">Devis envoyés</h2>
+      ${(r.data||[]).length?(r.data||[]).map(x=>`<div class="cp191-project"><strong>${h(money(x.amount))}</strong><div class="cp191-meta"><span class="cp191-chip">${h(x.status||"Reçu")}</span></div><div>${h(x.message||"")}</div></div>`).join(""):'<div class="cp191-empty">Aucun devis envoyé.</div>'}`;
+      return;
+    }
+
+    if(tab==="messages"){
+      const r=await withTimeout(c.from("messages").select("*").eq("professional_id",u.id).order("created_at",{ascending:true}),"Messages");
+      if(r.error)throw r.error;
+      root.innerHTML=`<span class="eyebrow">MESSAGES</span><h2 style="margin:7px 0">Mes conversations</h2>
+      ${(r.data||[]).length?(r.data||[]).map(m=>`<div class="cp191-project"><strong>${h(m.contact_name||"Client")}</strong><div>${h(m.content||"")}</div></div>`).join(""):'<div class="cp191-empty">Aucun message.</div>'}`;
+      return;
+    }
+
+    if(tab==="profile"){
+      root.innerHTML=`<span class="eyebrow">MON ENTREPRISE</span><h2 style="margin:7px 0">Profil professionnel</h2>
+      <div style="display:grid;gap:10px;max-width:650px;margin-top:16px">
+        <input id="cp191Company" placeholder="Nom de l’entreprise" value="${h(p.company_name||"")}" style="padding:11px;border:1px solid var(--line);border-radius:9px">
+        <input id="cp191Siret" placeholder="SIRET" value="${h(p.siret||"")}" style="padding:11px;border:1px solid var(--line);border-radius:9px">
+        <input id="cp191Trade" placeholder="Métier principal" value="${h(p.trade||"")}" style="padding:11px;border:1px solid var(--line);border-radius:9px">
+        <input id="cp191Area" placeholder="Zone d’intervention" value="${h(p.service_area||"")}" style="padding:11px;border:1px solid var(--line);border-radius:9px">
+        <textarea id="cp191Bio" placeholder="Description" style="padding:11px;border:1px solid var(--line);border-radius:9px">${h(p.description||"")}</textarea>
+        <button class="primary" id="cp191SavePro">Enregistrer mon profil pro</button>
+      </div>`;
+      document.getElementById("cp191SavePro").onclick=async()=>{
+        const x=await c.from("professional_profiles").upsert({
+          user_id:u.id,
+          company_name:document.getElementById("cp191Company").value.trim(),
+          siret:document.getElementById("cp191Siret").value.trim(),
+          trade:document.getElementById("cp191Trade").value.trim(),
+          service_area:document.getElementById("cp191Area").value.trim(),
+          description:document.getElementById("cp191Bio").value.trim()
+        },{onConflict:"user_id"});
+        if(!x.error)await c.from("profiles").update({role:"pro"}).eq("id",u.id);
+        alert(x.error?"Erreur : "+x.error.message:"✅ Profil professionnel enregistré.");
+      };
+    }
+  }catch(err){
+    root.innerHTML='<div class="cp191-error"><b>Impossible de charger l’espace pro.</b><br>'+h(err.message||err)+'</div>';
+  }
+}
+window.renderProV191=renderPro191;
+
+document.querySelectorAll("#cp191ProSide [data-protab]").forEach(b=>b.onclick=()=>renderPro191(b.dataset.protab));
+document.getElementById("cp191ProAction").onclick=async()=>{
+  const u=await currentUser();
+  if(!u){window.contactonOpenAuth?.();return}
+  document.getElementById("espace")?.scrollIntoView({behavior:"smooth"});
+  renderPro191("dashboard");
+};
+
+/* Compte : client -> espace client ; pro -> espace pro */
+document.addEventListener("click",async function(e){
+  const el=e.target.closest("button");
+  if(!el)return;
+  const txt=(el.textContent||"").trim().toLowerCase();
+  if(txt!=="compte")return;
+  const r=await getRole();
+  if(r==="pro"){
+    e.preventDefault();e.stopPropagation();if(e.stopImmediatePropagation)e.stopImmediatePropagation();
+    document.getElementById("espace")?.scrollIntoView({behavior:"smooth"});
+    renderPro191("dashboard");
+  }
+},true);
+
+async function init191(){
+  try{
+    const u=await currentUser();
+    if(!u){
+      const root=document.getElementById("clientView");
+      if(root)root.innerHTML='<div class="cp191-empty">Connectez-vous pour voir votre espace.</div>';
+      document.getElementById("cp191ProMain").innerHTML='<div class="cp191-empty">Connectez-vous pour accéder à votre espace professionnel.</div>';
+      return;
+    }
+    const r=await getRole();
+    if(r==="pro"){
+      const root=document.getElementById("clientView");
+      if(root)root.innerHTML='<div class="cp191-empty">Compte professionnel : utilisez l’espace professionnel ci-dessous.</div>';
+      renderPro191("dashboard");
+    }else{
+      renderClient191("projects");
+      document.getElementById("cp191ProMain").innerHTML='<div class="cp191-empty">Cet espace est réservé aux comptes professionnels.</div>';
+    }
+  }catch(err){
+    const root=document.getElementById("clientView");
+    if(root)root.innerHTML='<div class="cp191-error">'+h(err.message||err)+'</div>';
+  }
+}
+
+if(document.readyState==="loading"){
+  document.addEventListener("DOMContentLoaded",()=>setTimeout(init191,300),{once:true});
+}else{
+  setTimeout(init191,300);
+}
+})();
+</script>
+
+</body></html>
